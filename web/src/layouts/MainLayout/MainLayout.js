@@ -19,6 +19,16 @@ const MainLayout = ({ children }) => {
         <img src="/images/vr.png" alt="VR Brille" className="vr" />
       </MainHeader>
       {children}
+      <MainFooter>
+        <ul>
+          <li>
+            <a href="/impressum">Impressum</a>
+          </li>
+          <li>
+            <a href="/datenschutz">Datenschutz</a>
+          </li>
+        </ul>
+      </MainFooter>
     </>
   )
 }
@@ -103,6 +113,50 @@ const MainHeader = styled.header`
       right: 5px;
       top: 20px;
     }
+  }
+`
+
+const MainFooter = styled.footer`
+  align-items: center;
+  background-color: var(--color-border);
+  box-shadow: 0 0 5px var(--color-border);
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    color: var(--color-background);
+    font-size: 12px;
+    position: relative;
+  }
+
+  a {
+    color: var(--color-background);
+    transition: 0.25s;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--color-secondary);
+    opacity: 0.6;
+    text-decoration: none;
+  }
+
+  li:not(:last-child)::before {
+    content: '|';
+    position: absolute;
+    right: -12px;
+    top: 0;
   }
 `
 
