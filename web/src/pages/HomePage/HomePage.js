@@ -1,4 +1,5 @@
 import { MetaTags } from '@redwoodjs/web'
+import Anmeldung from 'src/components/Anmeldung/Anmeldung'
 import styled from 'styled-components'
 
 const HomePage = () => {
@@ -96,7 +97,7 @@ const HomePage = () => {
           <p>Mein Name ist Jörg Lauenroth.</p>
           <p>
             Mittlerweile habe ich knapp 20 Jahre Erfahrung im Bereich
-            Web-Entwicklung. Derzeit arbeite ich als Front-end Lead bei
+            Web-Entwicklung. Derzeit arbeite ich als Front-end Lead bei{' '}
             <a href="https://www.worldia.com/">Worldia</a>, einem Startup für
             Individualreisen.
           </p>
@@ -111,6 +112,7 @@ const HomePage = () => {
           </p>
         </aside>
       </MainWrapper>
+      <Anmeldung />
     </>
   )
 }
