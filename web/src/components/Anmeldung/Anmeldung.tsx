@@ -18,13 +18,22 @@ const Anmeldung = () => {
 
   return (
     <>
-      <Form className="modal">
+      <Form
+        className="modal"
+        onSubmit={() => {
+          setTimeout(() => {
+            setIsSending(true)
+          }, 2000)
+          console.log({ name, klasse, email, anmerkung })
+          setIsSending(false)
+        }}
+      >
         <h2>Anmeldung zur Computer AG</h2>
         <label htmlFor="name">Name des Kindes</label>
         <input
           id="name"
           name="name"
-          onKeyUp={(e) => setName(e.target.value)}
+          onKeyUp={(e) => setName(e.currentTarget.value)}
           disabled={isSending}
           required
         />
@@ -64,7 +73,7 @@ const Anmeldung = () => {
           id="email"
           name="email"
           type="email"
-          onKeyUp={(e) => setEmail(e.target.value)}
+          onKeyUp={(e) => setEmail(e.currentTarget.value)}
           disabled={isSending}
           required
         />
@@ -75,7 +84,7 @@ const Anmeldung = () => {
         <textarea
           id="anmerkung"
           name="anmerkung"
-          onKeyUp={(e) => setAnmerkung(e.target.value)}
+          onKeyUp={(e) => setAnmerkung(e.currentTarget.value)}
           disabled={isSending}
         />
 
