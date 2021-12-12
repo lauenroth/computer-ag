@@ -1,6 +1,6 @@
 import { MetaTags } from '@redwoodjs/web'
-import MainLayout from 'src/layouts/MainLayout/MainLayout'
 import styled from 'styled-components'
+import MainLayout from 'src/layouts/MainLayout/MainLayout'
 
 const ImpressumPage = () => {
   return (
