@@ -7,48 +7,20 @@
 // still render a generic error page, but your users will prefer something a bit more
 // thoughtful. =)
 
-export default () => (
-  <main>
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
-              html, body {
-                margin: 0;
-              }
-              html * {
-                box-sizing: border-box;
-              }
-              main {
-                display: flex;
-                align-items: center;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-                text-align: center;
-                background-color: #E2E8F0;
-                height: 100vh;
-              }
-              section {
-                background-color: white;
-                border-radius: 0.25rem;
-                width: 32rem;
-                padding: 1rem;
-                margin: 0 auto;
-                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-              }
-              h1 {
-                font-size: 2rem;
-                margin: 0;
-                font-weight: 500;
-                line-height: 1;
-                color: #2D3748;
-              }
-            `,
-      }}
-    />
+import MainLayout from 'src/layouts/MainLayout/MainLayout'
+import styled from 'styled-components'
 
-    <section>
-      <h1>
-        <span>Oops, da ist irgendwas schiefgelaufen...</span>
-      </h1>
-    </section>
-  </main>
+export default () => (
+  <MainLayout>
+    <Wrapper>
+      <h1>Ups, da ist irgendetwas schief gelaufen... 😢</h1>
+    </Wrapper>
+  </MainLayout>
 )
+
+const Wrapper = styled.main`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 135px);
+`
