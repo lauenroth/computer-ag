@@ -5,6 +5,7 @@ export const schema = gql`
     email: String!
     klasse: String!
     anmerkung: String
+    createdAt: DateTime!
   }
 
   type Query {
@@ -27,7 +28,7 @@ export const schema = gql`
   }
 
   type Mutation {
-    createAnmeldung(input: CreateAnmeldungInput!): Anmeldung! @requireAuth
+    createAnmeldung(input: CreateAnmeldungInput!): Anmeldung! @skipAuth
     updateAnmeldung(id: Int!, input: UpdateAnmeldungInput!): Anmeldung!
       @requireAuth
     deleteAnmeldung(id: Int!): Anmeldung! @requireAuth

@@ -1,5 +1,27 @@
 import { useState } from 'react'
+import {
+  Form,
+  TextField,
+  TextAreaField,
+  Submit,
+  Label,
+  EmailField,
+  SelectField,
+  FieldError,
+  FormError,
+  useForm,
+} from '@redwoodjs/forms'
+import { toast, Toaster } from '@redwoodjs/web/toast'
+import { useMutation } from '@redwoodjs/web'
 import styled from 'styled-components'
+
+const CREATE_ANMELDUNG = gql`
+  mutation CreateContactMutation($input: CreateAnmeldungInput!) {
+    createAnmeldung(input: $input) {
+      id
+    }
+  }
+`
 
 function validateEmail(email) {
   const res =
@@ -8,41 +30,55 @@ function validateEmail(email) {
 }
 
 const Anmeldung = () => {
+  const formMethods = useForm()
   const [name, setName] = useState('')
   const [klasse, setKlasse] = useState('')
   const [email, setEmail] = useState('')
-  const [anmerkung, setAnmerkung] = useState('')
-  const [isSending, setIsSending] = useState(false)
+
+  const [create, { loading, error }] = useMutation(CREATE_ANMELDUNG, {
+    onCompleted: () => {
+      toast.success('Vielen Dank für die Anmeldung!')
+      // close form
+      document.body.classList.remove('modal')
+      // reset form
+      formMethods.reset()
+    },
+  })
 
   const canSubmit = name.length > 0 && klasse !== '' && validateEmail(email)
 
   return (
     <>
-      <Form
+      <Toaster />
+      <AnmeldungWrapper
         className="modal"
-        onSubmit={() => {
-          setTimeout(() => {
-            setIsSending(true)
-          }, 2000)
-          console.log({ name, klasse, email, anmerkung })
-          setIsSending(false)
+        formMethods={formMethods}
+        onSubmit={(data) => {
+          create({ variables: { input: data } })
         }}
       >
         <h2>Anmeldung zur Computer AG</h2>
-        <label htmlFor="name">Name des Kindes</label>
-        <input
-          id="name"
+
+        <FormError
+          error={error}
+          wrapperStyle={{ color: 'red', backgroundColor: 'lavenderblush' }}
+        />
+
+        <Label name="name">Name des Kindes</Label>
+        <TextField
           name="name"
           onKeyUp={(e) => setName(e.currentTarget.value)}
-          disabled={isSending}
+          disabled={loading}
+          validation={{ required: true }}
           required
         />
-        <label htmlFor="klasse">Klasse</label>
-        <select
-          id="klasse"
+        <FieldError name="name" />
+
+        <Label name="klasse">Klasse</Label>
+        <SelectField
           name="klasse"
           onChange={(e) => setKlasse(e.target.value)}
-          disabled={isSending}
+          disabled={loading}
           required
         >
           <option value="">Bitte auswählen</option>
@@ -66,42 +102,40 @@ const Anmeldung = () => {
             <option>4C</option>
             <option>4D</option>
           </optgroup>
-        </select>
+        </SelectField>
 
-        <label htmlFor="email">E-Mail Adresse</label>
-        <input
-          id="email"
+        <Label name="email">E-Mail Adresse</Label>
+        <EmailField
           name="email"
-          type="email"
           onKeyUp={(e) => setEmail(e.currentTarget.value)}
-          disabled={isSending}
+          disabled={loading}
+          validation={{
+            required: true,
+            pattern: {
+              value: /[^@]+@[^.]+\..+/,
+              message: 'Bitte eine gültige E-Mail Adresse eingeben',
+            },
+          }}
           required
         />
+        <FieldError name="email" />
 
-        <label htmlFor="anmerkung">
+        <Label name="anmerkung">
           Anmerkung <span>(optional)</span>
-        </label>
-        <textarea
-          id="anmerkung"
-          name="anmerkung"
-          onKeyUp={(e) => setAnmerkung(e.currentTarget.value)}
-          disabled={isSending}
-        />
+        </Label>
+        <TextAreaField name="anmerkung" disabled={loading} />
 
-        <button
-          type="submit"
-          className={isSending ? 'sending' : ''}
-          disabled={!canSubmit}
-        >
+        <Submit className={loading ? 'sending' : ''} disabled={!canSubmit}>
           <span>Anmeldung abschicken</span>
-        </button>
+        </Submit>
         <p>
           Das Absenden der Anmeldung ist keine Garantie für einen Platz in der
           Computer AG. Bei mehr als 10 Anmeldungen wird ausgelost. Für jede
           Anmeldung wird Anfang Januar eine Zu- bzw. Absage per E-Mail
           verschickt.
         </p>
-      </Form>
+      </AnmeldungWrapper>
+
       <p className="close-modal">
         <button
           onClick={() => {
@@ -115,7 +149,7 @@ const Anmeldung = () => {
   )
 }
 
-const Form = styled.form`
+const AnmeldungWrapper = styled(Form)`
   z-index: 100;
 
   h2 {
