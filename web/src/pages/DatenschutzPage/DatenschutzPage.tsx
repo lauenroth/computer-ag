@@ -1,6 +1,6 @@
-import { MetaTags } from '@redwoodjs/web'
-import styled from 'styled-components'
-import MainLayout from 'src/layouts/MainLayout/MainLayout'
+import { MetaTags } from '@redwoodjs/web';
+import styled from 'styled-components';
+import MainLayout from 'src/layouts/MainLayout/MainLayout';
 
 const DatenschutzPage = () => {
   return (
@@ -806,11 +806,12 @@ const DatenschutzPage = () => {
         </Wrapper>
       </MainLayout>
     </>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   line-height: 1.5;
+  padding: 0 20px;
 
   ul:not(.list) {
     list-style: none;
@@ -819,6 +820,6 @@ const Wrapper = styled.section`
   ul {
     margin-bottom: 20px;
   }
-`
+`;
 
-export default DatenschutzPage
+export default DatenschutzPage;

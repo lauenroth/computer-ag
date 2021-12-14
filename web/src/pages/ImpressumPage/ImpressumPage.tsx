@@ -1,6 +1,6 @@
-import { MetaTags } from '@redwoodjs/web'
-import styled from 'styled-components'
-import MainLayout from 'src/layouts/MainLayout/MainLayout'
+import { MetaTags } from '@redwoodjs/web';
+import styled from 'styled-components';
+import MainLayout from 'src/layouts/MainLayout/MainLayout';
 
 const ImpressumPage = () => {
   return (
@@ -89,10 +89,12 @@ const ImpressumPage = () => {
         </Wrapper>
       </MainLayout>
     </>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
+  padding: 0 20px;
+
   h1 {
     margin: 40px 0 0;
   }
@@ -104,6 +106,6 @@ const Wrapper = styled.section`
   address {
     font-style: normal;
   }
-`
+`;
 
-export default ImpressumPage
+export default ImpressumPage;
