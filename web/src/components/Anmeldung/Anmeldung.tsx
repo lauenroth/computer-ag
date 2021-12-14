@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import {
   Form,
   TextField,
@@ -10,146 +10,162 @@ import {
   FieldError,
   FormError,
   useForm,
-} from '@redwoodjs/forms'
-import { toast, Toaster } from '@redwoodjs/web/toast'
-import { useMutation } from '@redwoodjs/web'
-import styled from 'styled-components'
+} from '@redwoodjs/forms';
+import { useMutation } from '@redwoodjs/web';
+import styled from 'styled-components';
 
 const CREATE_ANMELDUNG = gql`
-  mutation CreateContactMutation($input: CreateAnmeldungInput!) {
+  mutation CreateAnmeldungMutation($input: CreateAnmeldungInput!) {
     createAnmeldung(input: $input) {
       id
     }
   }
-`
+`;
 
 function validateEmail(email) {
   const res =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return res.test(String(email).toLowerCase())
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return res.test(String(email).toLowerCase());
 }
 
 const Anmeldung = () => {
-  const formMethods = useForm()
-  const [name, setName] = useState('')
-  const [klasse, setKlasse] = useState('')
-  const [email, setEmail] = useState('')
+  const formMethods = useForm();
+  const [canSubmit, setCanSubmit] = useState(false);
+  const [isSent, setSent] = useState(false);
 
   const [create, { loading, error }] = useMutation(CREATE_ANMELDUNG, {
     onCompleted: () => {
-      toast.success('Vielen Dank für die Anmeldung!')
-      // close form
-      document.body.classList.remove('modal')
-      // reset form
-      formMethods.reset()
+      setSent(true);
     },
-  })
+  });
 
-  const canSubmit = name.length > 0 && klasse !== '' && validateEmail(email)
+  const closeModal = () => {
+    document.body.classList.remove('modal');
+    // reset form
+    formMethods.reset();
+
+    setTimeout(() => {
+      setSent(false);
+      setCanSubmit(true);
+    }, 500);
+  };
+
+  const validateForm = () => {
+    const { name, klasse, email } = formMethods.getValues();
+    const submitCheck =
+      name.length > 0 && klasse !== '' && validateEmail(email);
+    setCanSubmit(submitCheck);
+  };
 
   return (
     <>
-      <Toaster />
       <AnmeldungWrapper
         className="modal"
         formMethods={formMethods}
+        onBlur={validateForm}
         onSubmit={(data) => {
-          create({ variables: { input: data } })
+          create({ variables: { input: data } });
         }}
       >
-        <h2>Anmeldung zur Computer AG</h2>
+        {isSent ? (
+          <>
+            <h2>Anmeldung wurde verschickt 🙂</h2>
+            <p>Vielen Dank für das Interesse an der Computer AG!</p>
+            <p>
+              Ich werde mich Anfang 2022 bezüglich einer Zu-/Absage bei Ihnen
+              melden.
+            </p>
+            <p>
+              Bis dahin wünsche ich Ihnen frohe Weihnachten und einen guten
+              Rutsch ins neue Jahr 🎉
+            </p>
+            <p>Bleiben Sie gesund!</p>
+          </>
+        ) : (
+          <>
+            <h2>Anmeldung zur Computer AG</h2>
 
-        <FormError
-          error={error}
-          wrapperStyle={{ color: 'red', backgroundColor: 'lavenderblush' }}
-        />
+            <FormError error={error} wrapperClassName="error" />
 
-        <Label name="name">Name des Kindes</Label>
-        <TextField
-          name="name"
-          onKeyUp={(e) => setName(e.currentTarget.value)}
-          disabled={loading}
-          validation={{ required: true }}
-          required
-        />
-        <FieldError name="name" />
+            <Label name="name">Name des Kindes</Label>
+            <TextField
+              name="name"
+              disabled={loading}
+              validation={{ required: true }}
+              required
+            />
+            <FieldError name="name" />
 
-        <Label name="klasse">Klasse</Label>
-        <SelectField
-          name="klasse"
-          onChange={(e) => setKlasse(e.target.value)}
-          disabled={loading}
-          required
-        >
-          <option value="">Bitte auswählen</option>
-          <optgroup label="3.Klasse">
-            <option>A1</option>
-            <option>A2</option>
-            <option>A3</option>
-            <option>B1</option>
-            <option>B2</option>
-            <option>B3</option>
-            <option>C1</option>
-            <option>C2</option>
-            <option>C3</option>
-            <option>D1</option>
-            <option>D2</option>
-            <option>D3</option>
-          </optgroup>
-          <optgroup label="4.Klasse">
-            <option>4A</option>
-            <option>4B</option>
-            <option>4C</option>
-            <option>4D</option>
-          </optgroup>
-        </SelectField>
+            <Label name="klasse">Klasse</Label>
+            <SelectField name="klasse" disabled={loading} required>
+              <option value="">Bitte auswählen</option>
+              <optgroup label="3.Klasse">
+                <option>A1</option>
+                <option>A2</option>
+                <option>A3</option>
+                <option>B1</option>
+                <option>B2</option>
+                <option>B3</option>
+                <option>C1</option>
+                <option>C2</option>
+                <option>C3</option>
+                <option>D1</option>
+                <option>D2</option>
+                <option>D3</option>
+              </optgroup>
+              <optgroup label="4.Klasse">
+                <option>4A</option>
+                <option>4B</option>
+                <option>4C</option>
+                <option>4D</option>
+              </optgroup>
+            </SelectField>
 
-        <Label name="email">E-Mail Adresse</Label>
-        <EmailField
-          name="email"
-          onKeyUp={(e) => setEmail(e.currentTarget.value)}
-          disabled={loading}
-          validation={{
-            required: true,
-            pattern: {
-              value: /[^@]+@[^.]+\..+/,
-              message: 'Bitte eine gültige E-Mail Adresse eingeben',
-            },
-          }}
-          required
-        />
-        <FieldError name="email" />
+            <Label name="email">E-Mail Adresse</Label>
+            <EmailField
+              name="email"
+              disabled={loading}
+              onKeyUp={validateForm}
+              validation={{
+                required: true,
+                pattern: {
+                  value: /[^@]+@[^.]+\..+/,
+                  message: 'Bitte eine gültige E-Mail Adresse eingeben',
+                },
+              }}
+              required
+            />
+            <FieldError name="email" />
 
-        <Label name="anmerkung">
-          Anmerkung <span>(optional)</span>
-        </Label>
-        <TextAreaField name="anmerkung" disabled={loading} />
+            <Label name="anmerkung">
+              Anmerkung <span>(optional)</span>
+            </Label>
+            <TextAreaField name="anmerkung" disabled={loading} />
 
-        <Submit className={loading ? 'sending' : ''} disabled={!canSubmit}>
-          <span>Anmeldung abschicken</span>
-        </Submit>
-        <p>
-          Das Absenden der Anmeldung ist keine Garantie für einen Platz in der
-          Computer AG. Bei mehr als 10 Anmeldungen wird ausgelost. Für jede
-          Anmeldung wird Anfang Januar eine Zu- bzw. Absage per E-Mail
-          verschickt.
-        </p>
+            <Submit className={loading ? 'sending' : ''} disabled={!canSubmit}>
+              <span>Anmeldung abschicken</span>
+            </Submit>
+            <p className="info">
+              Das Absenden der Anmeldung ist keine Garantie für einen Platz in
+              der Computer AG. Bei mehr als 10 Anmeldungen wird ausgelost. Für
+              jede Anmeldung wird Anfang Januar eine Zu- bzw. Absage per E-Mail
+              verschickt.
+            </p>
+          </>
+        )}
       </AnmeldungWrapper>
 
       <p className="close-modal">
-        <button
-          onClick={() => {
-            document.body.classList.remove('modal')
-          }}
-        >
+        <button onClick={closeModal}>
           <img src="/images/close.svg" alt="Fenster schließen" />
         </button>
       </p>
     </>
-  )
-}
+  );
+};
 
 const AnmeldungWrapper = styled(Form)`
+  transition: 0.25s;
   z-index: 100;
 
   h2 {
@@ -196,7 +212,7 @@ const AnmeldungWrapper = styled(Form)`
     height: 5em;
   }
 
-  p {
+  .info {
     font-size: 12px;
     margin-bottom: 0;
     text-align: justify;
@@ -242,6 +258,18 @@ const AnmeldungWrapper = styled(Form)`
     }
   }
 
+  .error {
+    background-color: lavenderblush;
+    border-radius: 4px;
+    color: #900;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+
+    p {
+      margin: 0;
+    }
+  }
+
   @media (max-width: 650px) {
     left: 0;
     right: 0;
@@ -265,6 +293,6 @@ const AnmeldungWrapper = styled(Form)`
       transform: scale(0);
     }
   }
-`
+`;
 
-export default Anmeldung
+export default Anmeldung;
