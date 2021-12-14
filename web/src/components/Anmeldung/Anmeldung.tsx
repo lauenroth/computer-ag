@@ -72,8 +72,8 @@ const Anmeldung = () => {
             <h2>Anmeldung wurde verschickt 🙂</h2>
             <p>Vielen Dank für das Interesse an der Computer AG!</p>
             <p>
-              Ich werde mich Anfang 2022 bezüglich einer Zu-/Absage bei Ihnen
-              melden.
+              Ich werde mich Anfang 2022 bezüglich einer Zu- bzw. Absage bei
+              Ihnen melden.
             </p>
             <p>
               Bis dahin wünsche ich Ihnen frohe Weihnachten und einen guten
