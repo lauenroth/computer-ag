@@ -80,6 +80,11 @@ const Anmeldung = () => {
               Rutsch ins neue Jahr 🎉
             </p>
             <p>Bleiben Sie gesund!</p>
+            <p>
+              Best Grüße!
+              <br />
+              Jörg Lauenroth
+            </p>
           </>
         ) : (
           <>
