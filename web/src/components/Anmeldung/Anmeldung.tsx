@@ -79,7 +79,7 @@ const Anmeldung = () => {
               Bis dahin wünsche ich Ihnen frohe Weihnachten und einen guten
               Rutsch ins neue Jahr 🎉
             </p>
-            <p>Bleiben Sie gesund!</p>
+            <p>Bitte bleiben Sie gesund!</p>
             <p>
               Best Grüße!
               <br />
