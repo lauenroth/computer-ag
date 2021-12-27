@@ -72,14 +72,12 @@ const Anmeldung = () => {
             <h2>Anmeldung wurde verschickt 🙂</h2>
             <p>Vielen Dank für das Interesse an der Computer AG!</p>
             <p>
-              Ich werde mich Anfang 2022 bezüglich einer Zu- bzw. Absage bei
+              Ich werde mich Anfang Januar bezüglich einer Zu- bzw. Absage bei
               Ihnen melden.
             </p>
             <p>
-              Bis dahin wünsche ich Ihnen frohe Weihnachten und einen guten
-              Rutsch ins neue Jahr 🎉
+              Bis dahin wünsche ich Ihnen einen guten Start ins neue Jahr 🎉
             </p>
-            <p>Bitte bleiben Sie gesund!</p>
             <p>
               Best Grüße!
               <br />
@@ -92,7 +90,7 @@ const Anmeldung = () => {
 
             <FormError error={error} wrapperClassName="error" />
 
-            <Label name="name">Name des Kindes</Label>
+            <Label name="name">Vor- und Nachname des Kindes</Label>
             <TextField
               name="name"
               disabled={loading}
@@ -155,6 +153,10 @@ const Anmeldung = () => {
               der Computer AG. Bei mehr als 10 Anmeldungen wird ausgelost. Für
               jede Anmeldung wird Anfang Januar eine Zu- bzw. Absage per E-Mail
               verschickt.
+            </p>
+            <p className="info">
+              Die Daten werden nur für die Anmeldung genutzt und
+              selbstverständlich nicht weitergegeben.
             </p>
           </>
         )}
@@ -219,8 +221,11 @@ const AnmeldungWrapper = styled(Form)`
 
   .info {
     font-size: 12px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     text-align: justify;
+  }
+  .info + .info {
+    margin-top: 10px;
   }
 
   button {

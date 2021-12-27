@@ -97,7 +97,7 @@ body .modal {
 	color: var(--color-background);
 	display: flex;
 	flex-direction: column;
-	left: calc(50% - 225px);
+	left: calc(50% - 275px);
 	padding: 20px;
 	position: fixed;
 	transition: 0.25s;
