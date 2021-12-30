@@ -1,41 +1,39 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 interface Props {
-  isMaxWidth?: boolean
+  isMaxWidth?: boolean;
 }
 
-const MainLayout: React.FC<Props> = ({ children, isMaxWidth }) => {
-  return (
-    <>
-      <MainHeader>
-        <img
-          src="/images/makey.png"
-          alt="MakeyMakey"
-          className="makey"
-          height="80"
-        />
-        <h1>
-          <a href="/">Computer AG</a>
-          <div>
-            <span>Grundschule</span> am Rüdesheimer Platz
-          </div>
-        </h1>
-        <img src="/images/vr.png" alt="VR Brille" className="vr" />
-      </MainHeader>
-      {isMaxWidth ? <CenteredWrapper>{children}</CenteredWrapper> : children}
-      <MainFooter>
-        <ul>
-          <li>
-            <a href="/impressum">Impressum</a>
-          </li>
-          <li>
-            <a href="/datenschutz">Datenschutz</a>
-          </li>
-        </ul>
-      </MainFooter>
-    </>
-  )
-}
+const MainLayout: React.FC<Props> = ({ children, isMaxWidth }) => (
+  <>
+    <MainHeader className="main">
+      <img
+        src="/images/makey.png"
+        alt="MakeyMakey"
+        className="makey"
+        height="80"
+      />
+      <h1>
+        <a href="/">Computer AG</a>
+        <div>
+          <span>Grundschule</span> am Rüdesheimer Platz
+        </div>
+      </h1>
+      <img src="/images/vr.png" alt="VR Brille" className="vr" />
+    </MainHeader>
+    {isMaxWidth ? <CenteredWrapper>{children}</CenteredWrapper> : children}
+    <MainFooter>
+      <ul>
+        <li>
+          <a href="/impressum">Impressum</a>
+        </li>
+        <li>
+          <a href="/datenschutz">Datenschutz</a>
+        </li>
+      </ul>
+    </MainFooter>
+  </>
+);
 
 const MainHeader = styled.header`
   align-items: center;
@@ -46,6 +44,7 @@ const MainHeader = styled.header`
   justify-content: center;
   overflow: hidden;
   position: relative;
+  transition: 0.25s;
 
   h1 {
     letter-spacing: 1px;
@@ -118,7 +117,7 @@ const MainHeader = styled.header`
       top: 20px;
     }
   }
-`
+`;
 
 const MainFooter = styled.footer`
   align-items: center;
@@ -162,10 +161,10 @@ const MainFooter = styled.footer`
     right: -12px;
     top: 0;
   }
-`
+`;
 
 const CenteredWrapper = styled.main`
   max-width: 800px;
-`
+`;
 
-export default MainLayout
+export default MainLayout;
