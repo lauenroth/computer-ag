@@ -1,0 +1,14 @@
+{
+  "short_name": "Computer AG",
+  "name": "Computer AG - GARP",
+  "icons": [
+      {
+          "src": "/images/vr.png",
+          "type": "image/png"
+      }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#1d3557",
+  "display": "standalone",
+  "theme_color": "#1d3557"
+}
