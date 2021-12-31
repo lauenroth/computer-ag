@@ -20,7 +20,7 @@ const UebersichtPage = () => {
               <li>
                 <Link to={routes.wasIstEinComputer()}>
                   1. Was ist ein Computer?
-                </Link>{' '}
+                </Link>
               </li>
               <li>
                 <p>2. Woraus besteht ein Computer?</p>
@@ -32,10 +32,13 @@ const UebersichtPage = () => {
                 <p>4. Benutzerkonten</p>
               </li>
               <li>
-                <p>5. Das Internet</p>
+                <p>5. Dateien und Ordner</p>
               </li>
               <li>
-                <p>6. Suchmaschinen</p>
+                <p>6. Das Internet</p>
+              </li>
+              <li>
+                <p>7. Suchmaschinen</p>
               </li>
               <li className="more">Weitere Themen folgen in Kürze...</li>
             </List>
