@@ -10,9 +10,14 @@ const WasIstEinComputerPage = () => {
         <Breadcrumb />
         <h1>Was ist ein Computer?</h1>
         <p>
-          Computer umgeben uns überall.
+          Ob Smartphone, Tablet, Taschenrechner, die Spielkonsole, die Kasse im
+          Supermarkt oder der Boardcomputer im Auto - Computer umgeben uns
+          überall.
+        </p>
+        <p>
           <strong>&quot;Computer&quot;</strong> ist Englisch und heißt soviel
-          wie <strong>&quot;Rechner&quot;</strong>.
+          wie <strong>&quot;Rechner&quot;</strong>. Dabei kann er weit mehr als
+          schnell rechnen.
         </p>
       </MainLayout>
     </>
