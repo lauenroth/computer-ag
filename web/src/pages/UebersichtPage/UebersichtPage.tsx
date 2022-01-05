@@ -1,14 +1,22 @@
 import { Link, routes } from '@redwoodjs/router';
 import { MetaTags } from '@redwoodjs/web';
 
+import Breadcrumb from 'src/components/Breadcrumb/Breadcrumb';
 import MainLayout from 'src/layouts/MainLayout/MainLayout';
 import styled from 'styled-components';
+
+const breadcumbItems = [
+  {
+    name: 'Übersicht',
+  },
+];
 
 const UebersichtPage = () => {
   return (
     <>
       <MetaTags title="Kursübersicht | Computer AG" />
-      <MainLayout>
+      <MainLayout isMaxWidth maxWidth="wider">
+        <Breadcrumb items={breadcumbItems} />
         <Wrapper>
           <div>
             <h1>Kursübersicht</h1>
@@ -75,7 +83,6 @@ const Wrapper = styled.main`
   display: grid;
   gap: 30px;
   grid-template-columns: auto 260px;
-  padding: 30px;
 
   aside {
     background-color: var(--color-background-secondary);

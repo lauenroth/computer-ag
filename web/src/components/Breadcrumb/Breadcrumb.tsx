@@ -1,7 +1,16 @@
 import { Link, routes } from '@redwoodjs/router';
 import styled from 'styled-components';
 
-const Breadcrumb = () => {
+interface BreadcrumItem {
+  name: string;
+  url?: string;
+}
+
+interface Props {
+  items: BreadcrumItem[];
+}
+
+const Breadcrumb: React.FC<Props> = ({ items }) => {
   return (
     <Wrapper>
       <li>
@@ -16,10 +25,15 @@ const Breadcrumb = () => {
           </svg>
         </Link>
       </li>
-      <li>
-        <Link to={routes.uebersicht()}>Übersicht</Link>
-      </li>
-      <li>Was ist ein Computer?</li>
+      {items.map((item) => (
+        <li key={`breadcrumb-${item.name}`}>
+          {item.url ? (
+            <Link to={item.url}>{item.name}</Link>
+          ) : (
+            <span>{item.name}</span>
+          )}
+        </li>
+      ))}
     </Wrapper>
   );
 };
@@ -41,6 +55,9 @@ const Wrapper = styled.ul`
     color: var(--color-text);
     margin-right: 10px;
     padding-right: 25px;
+  }
+
+  li > * {
     position: relative;
     top: 1px;
   }

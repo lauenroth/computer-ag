@@ -1,13 +1,24 @@
+import { routes } from '@redwoodjs/router';
 import { MetaTags } from '@redwoodjs/web';
 import Breadcrumb from 'src/components/Breadcrumb/Breadcrumb';
 import MainLayout from 'src/layouts/MainLayout/MainLayout';
+
+const breadcumbItems = [
+  {
+    name: 'Übersicht',
+    url: routes.uebersicht(),
+  },
+  {
+    name: 'Was ist ein Computer?',
+  },
+];
 
 const WasIstEinComputerPage = () => {
   return (
     <>
       <MetaTags title="Was ist ein Computer? | Computer AG" />
       <MainLayout isMaxWidth>
-        <Breadcrumb />
+        <Breadcrumb items={breadcumbItems} />
         <h1>Was ist ein Computer?</h1>
         <p>
           Ob Smartphone, Tablet, Taschenrechner, die Spielkonsole, die Kasse im

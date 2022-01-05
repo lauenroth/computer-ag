@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface Props {
   isMaxWidth?: boolean;
+  maxWidth?: 'default' | 'wider';
 }
 
-const MainLayout: React.FC<Props> = ({ children, isMaxWidth }) => (
+const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => (
   <>
     <MainHeader className="main">
       <img
@@ -21,7 +22,11 @@ const MainLayout: React.FC<Props> = ({ children, isMaxWidth }) => (
       </h1>
       <img src="/images/vr.png" alt="VR Brille" className="vr" />
     </MainHeader>
-    {isMaxWidth ? <CenteredWrapper>{children}</CenteredWrapper> : children}
+    {isMaxWidth ? (
+      <CenteredWrapper maxWidth={maxWidth}>{children}</CenteredWrapper>
+    ) : (
+      children
+    )}
     <MainFooter>
       <ul>
         <li>
@@ -163,8 +168,11 @@ const MainFooter = styled.footer`
   }
 `;
 
-const CenteredWrapper = styled.main`
-  max-width: 800px;
+const CenteredWrapper = styled.main<{ maxWidth?: 'default' | 'wider' }>`
+  ${(props) => css`
+    max-width: ${props.maxWidth === 'default' ? '800px' : '1200px'};
+    padding: 0 30px;
+  `}
 `;
 
 export default MainLayout;
