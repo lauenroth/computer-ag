@@ -119,7 +119,11 @@ const MainHeader = styled.header`
     .vr {
       height: 60px;
       right: 5px;
-      top: 20px;
+      top: 28px;
+
+      &:hover {
+        top: 20px;
+      }
     }
   }
 `;
