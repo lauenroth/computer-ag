@@ -13,6 +13,7 @@ import MainLayout from './layouts/MainLayout/MainLayout'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/feedback" page={FeedbackPage} name="feedback" />
       <Route path="/was-ist-ein-computer" page={WasIstEinComputerPage} name="wasIstEinComputer" />
       <Route path="/uebersicht" page={UebersichtPage} name="uebersicht" />
       <Route path="/flyer" page={FlyerPage} name="flyer" />
