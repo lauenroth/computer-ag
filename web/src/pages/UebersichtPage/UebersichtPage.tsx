@@ -116,6 +116,10 @@ const Wrapper = styled.main`
       text-decoration: none;
     }
   }
+
+  @media (max-width: 700px) {
+    display: block;
+  }
 `;
 
 const List = styled.ol`
@@ -165,6 +169,13 @@ const List = styled.ol`
         border-color: rgb(191, 208, 225);
         opacity: 1;
       }
+    }
+  }
+
+  @media (max-width: 700px) {
+    li,
+    li a {
+      display: block;
     }
   }
 `;
