@@ -19,15 +19,19 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ anmeldungen }) => {
   return (
-    <ul>
-      {anmeldungen.map((anmeldung) => (
-        <li key={`anmeldung-${anmeldung.id}`}>
-          <p>
-            {anmeldung.name} ({anmeldung.klasse})
-          </p>
-          <sub>{anmeldung.anmerkung}</sub>
-        </li>
-      ))}
-    </ul>
+    <>
+      <p>{anmeldungen.length} Anmeldunge:</p>
+
+      <ul>
+        {anmeldungen.map((anmeldung) => (
+          <li key={`anmeldung-${anmeldung.id}`}>
+            <p>
+              {anmeldung.name} ({anmeldung.klasse})
+            </p>
+            <sub>{anmeldung.anmerkung}</sub>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
