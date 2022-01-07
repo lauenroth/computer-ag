@@ -1,6 +1,6 @@
-import { MetaTags } from '@redwoodjs/web'
-import Anmeldung from 'src/components/Anmeldung/Anmeldung'
-import styled from 'styled-components'
+import { MetaTags } from '@redwoodjs/web';
+import Anmeldung from 'src/components/Anmeldung/Anmeldung';
+import styled from 'styled-components';
 
 const HomePage = () => {
   return (
@@ -61,7 +61,7 @@ const HomePage = () => {
             <dt>Wann?</dt>
             <dd>
               Dienstags von 14-15 Uhr
-              <div>Ab voraussichtlich 11. Januar 2022</div>
+              <div>Ab voraussichtlich 18. Januar 2022</div>
             </dd>
             <dt>Wo?</dt>
             <dd>Computerraum der Grundschule am Rüdesheimer Platz</dd>
@@ -76,8 +76,8 @@ const HomePage = () => {
           <p>
             <button
               onClick={() => {
-                document.body.classList.add('modal')
-                document.getElementById('name').focus()
+                document.body.classList.add('modal');
+                document.getElementById('name').focus();
               }}
             >
               Zur Anmeldung
@@ -114,8 +114,8 @@ const HomePage = () => {
       </MainWrapper>
       <Anmeldung />
     </>
-  )
-}
+  );
+};
 
 const MainWrapper = styled.main`
   align-items: flex-start;
@@ -283,6 +283,6 @@ const MainWrapper = styled.main`
       transform: rotate(0deg);
     }
   }
-`
+`;
 
-export default HomePage
+export default HomePage;
