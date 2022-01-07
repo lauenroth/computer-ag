@@ -40,7 +40,7 @@ export const Success = ({ anmeldungen }) => {
             <tr key={anmeldung.id}>
               <td className="name">{anmeldung.name}</td>
               <td className="klasse">{anmeldung.klasse}</td>
-              <td>{anmeldung.anmerkung}</td>
+              <td className="anmerkung">{anmeldung.anmerkung}</td>
             </tr>
           ))}
         </tbody>
@@ -66,5 +66,29 @@ const Table = styled.table`
 
   .klasse {
     text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    thead {
+      display: none;
+    }
+    tbody {
+      display: grid;
+
+      tr {
+        border-bottom: 1px dashed #ddd;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    td {
+      background: none;
+    }
+    .anmerkung {
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
   }
 `;
