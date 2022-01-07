@@ -119,6 +119,10 @@ const Wrapper = styled.main`
 
   @media (max-width: 700px) {
     display: block;
+
+    aside {
+      margin-bottom: 30px;
+    }
   }
 `;
 
