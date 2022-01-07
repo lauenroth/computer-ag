@@ -12,7 +12,6 @@ const AnmeldungenPage = () => {
       You can look at this documentation for best practices : https://developers.google.com/search/docs/advanced/appearance/good-titles-snippets */
       />
       <MainLayout isMaxWidth>
-        <h1>Anmeldungen</h1>
         <AnmeldungenCell />
       </MainLayout>
     </>

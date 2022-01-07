@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 export const QUERY = gql`
   query FindAnmeldungenQuery {
     anmeldungen {
@@ -9,7 +11,11 @@ export const QUERY = gql`
   }
 `;
 
-export const Loading = () => <div>Loading...</div>;
+export const Loading = () => (
+  <>
+    <h1>Anmeldungen: ...</h1>
+  </>
+);
 
 export const Empty = () => <div>Empty</div>;
 
@@ -20,18 +26,45 @@ export const Failure = ({ error }) => (
 export const Success = ({ anmeldungen }) => {
   return (
     <>
-      <p>{anmeldungen.length} Anmeldunge:</p>
-
-      <ul>
-        {anmeldungen.map((anmeldung) => (
-          <li key={`anmeldung-${anmeldung.id}`}>
-            <p>
-              {anmeldung.name} ({anmeldung.klasse})
-            </p>
-            <sub>{anmeldung.anmerkung}</sub>
-          </li>
-        ))}
-      </ul>
+      <h1>Anmeldungen: {anmeldungen.length}</h1>
+      <Table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Klasse</th>
+            <th>Anmerkung</th>
+          </tr>
+        </thead>
+        <tbody>
+          {anmeldungen.map((anmeldung) => (
+            <tr key={anmeldung.id}>
+              <td className="name">{anmeldung.name}</td>
+              <td className="klasse">{anmeldung.klasse}</td>
+              <td>{anmeldung.anmerkung}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     </>
   );
 };
+
+const Table = styled.table`
+  margin-bottom: 30px;
+
+  th,
+  td {
+    padding: 10px;
+  }
+  td {
+    background-color: #789abc;
+  }
+
+  .name {
+    white-space: nowrap;
+  }
+
+  .klasse {
+    text-align: center;
+  }
+`;
