@@ -73,6 +73,12 @@ const HomePage = () => {
             <dt>Kosten?</dt>
             <dd>Die Teilnahme an der Computer AG ist kostenlos.</dd>
           </dl>
+          <p className="info">
+            Da bereits über 30 Anmeldungen eingegangen sind, werden die
+            Teilnehmer ausgelost.
+            <br /> Es werden noch Anmeldungen bis einschließlich 12.1.2022
+            berücksichtigt.
+          </p>
           <p>
             <button
               onClick={() => {
