@@ -232,6 +232,10 @@ const MainWrapper = styled.main`
     margin: 0;
   }
 
+  .info {
+    max-width: 540px;
+  }
+
   @media (min-width: 1260px) {
     ul {
       justify-content: space-between;

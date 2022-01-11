@@ -158,6 +158,16 @@ body.modal .modal {
 	top: 60px;
 }
 
+.info {
+  background-color: var(--color-background-secondary);
+  background-image: url(/images/info.svg);
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: var(--color-background);
+  padding: 20px 20px 20px 60px;
+}
+
 @media (max-width: 650px) {
 	body.modal .modal {
 		border-radius: 0;
