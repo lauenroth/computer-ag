@@ -1,5 +1,5 @@
 import { MetaTags } from '@redwoodjs/web';
-import Anmeldung from 'src/components/Anmeldung/Anmeldung';
+// import Anmeldung from 'src/components/Anmeldung/Anmeldung';
 import styled from 'styled-components';
 
 const HomePage = () => {
@@ -20,9 +20,10 @@ const HomePage = () => {
           </p>
           <p>
             Weitere Informationen zur Computer AG wird es auf dieser Website
-            geben, sobald der Kurs begonnen hat - voraussichtlich am 11. Januar
+            geben, sobald der Kurs begonnen hat - voraussichtlich am 18. Januar
             2022.
           </p>
+
           <h2>
             Themen (<abbr title="unter anderem">u.a.</abbr>)
           </h2>
@@ -55,6 +56,7 @@ const HomePage = () => {
             <li>Bluetooth / NFC</li>
             <li>QR-Code / RFID</li>
           </ul>
+
           <h2>Wann, wo, wie?!?</h2>
           <p>Die Computer AG findet wie folgt statt:</p>
           <dl>
@@ -73,13 +75,12 @@ const HomePage = () => {
             <dt>Kosten?</dt>
             <dd>Die Teilnahme an der Computer AG ist kostenlos.</dd>
           </dl>
+
+          <h2>Anmeldung</h2>
           <p className="info">
-            Da bereits über 30 Anmeldungen eingegangen sind, werden die
-            Teilnehmer ausgelost.
-            <br /> Es werden noch Anmeldungen bis einschließlich 12.1.2022
-            berücksichtigt.
+            Leider sind derzeit keine neuen Anmeldungen möglich.
           </p>
-          <p>
+          {/* <p>
             <button
               onClick={() => {
                 document.body.classList.add('modal');
@@ -88,7 +89,7 @@ const HomePage = () => {
             >
               Zur Anmeldung
             </button>
-          </p>
+          </p> */}
         </section>
         <aside>
           <img
@@ -113,12 +114,12 @@ const HomePage = () => {
             Förderverein und ab Anfang 2022 mit der Computer AG.
           </p>
           <p>
-            Bei Fragen erreichen Sie mich am besten per E-Mail an{' '}
-            <a href="mailto:hi@jörg.dev">hi@jörg.dev</a>.
+            Bei Fragen oder Anregungen erreichen Sie mich am besten per E-Mail
+            an <a href="mailto:hi@computer-ag.com">hi@computer-ag.com</a>.
           </p>
         </aside>
       </MainWrapper>
-      <Anmeldung />
+      {/* <Anmeldung /> */}
     </>
   );
 };
