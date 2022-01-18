@@ -209,7 +209,7 @@ const DatenschutzPage = () => {
           <p>Deidesheimer Straße 16</p>
           <p>14197 Berlin</p>
           <p>Tel.: 0156 78 74 55 78</p>
-          <p>E-Mail: hi@jörg.dev</p>
+          <p>E-Mail: hi@computer-ag.com</p>
           <p>
             Website: <a href="https://jörg.dev">jörg.dev</a>
           </p>
