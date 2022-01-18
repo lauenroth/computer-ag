@@ -18,11 +18,6 @@ const HomePage = () => {
             theoretischen Themen wird es immer auch die Möglichkeit geben, das
             Erlernte praktisch anzuwenden.
           </p>
-          <p>
-            Weitere Informationen zur Computer AG wird es auf dieser Website
-            geben, sobald der Kurs begonnen hat - voraussichtlich am 18. Januar
-            2022.
-          </p>
 
           <h2>
             Themen (<abbr title="unter anderem">u.a.</abbr>)
@@ -38,9 +33,7 @@ const HomePage = () => {
             <li>Dateien und Ordner</li>
             <li>Das Internet</li>
             <li>Suchmaschinen</li>
-            <li>Word</li>
-            <li>Excel</li>
-            <li>PowerPoint</li>
+            <li>Libre Office</li>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
@@ -61,10 +54,7 @@ const HomePage = () => {
           <p>Die Computer AG findet wie folgt statt:</p>
           <dl>
             <dt>Wann?</dt>
-            <dd>
-              Dienstags von 14-15 Uhr
-              <div>Ab voraussichtlich 18. Januar 2022</div>
-            </dd>
+            <dd>Dienstags von 14-15 Uhr</dd>
             <dt>Wo?</dt>
             <dd>Computerraum der Grundschule am Rüdesheimer Platz</dd>
             <dt>Für wen?</dt>
@@ -78,7 +68,7 @@ const HomePage = () => {
 
           <h2>Anmeldung</h2>
           <p className="info">
-            Leider sind derzeit keine neuen Anmeldungen möglich.
+            Leider sind derzeit keine neuen Anmeldungen mehr möglich.
           </p>
           {/* <p>
             <button
