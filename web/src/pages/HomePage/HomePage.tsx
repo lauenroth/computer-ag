@@ -1,5 +1,5 @@
 import { MetaTags } from '@redwoodjs/web';
-// import Anmeldung from 'src/components/Anmeldung/Anmeldung';
+import Anmeldung from 'src/components/Anmeldung/Anmeldung';
 import styled from 'styled-components';
 
 const HomePage = () => {
@@ -68,19 +68,22 @@ const HomePage = () => {
 
           <h2>Anmeldung</h2>
           <p className="info">
-            Leider sind derzeit keine neuen Anmeldungen mehr möglich.
+            Die Gruppe ist derzeit leider voll, daher werden neue Anmeldungen
+            auf die Warteliste gesetzt. Sollte ein Platz frei werden, wird unter
+            den Kindern der Warteliste ausgelost.
           </p>
-          {/* <p>
+          <p>
             <button
               onClick={() => {
                 document.body.classList.add('modal');
                 document.getElementById('name').focus();
               }}
             >
-              Zur Anmeldung
+              Zur Warteliste
             </button>
-          </p> */}
+          </p>
         </section>
+
         <aside>
           <img
             src="https://Jörg.dev/static/jorg-29ca016ac01ed3bc37aa690f6827d3f5.webp"
@@ -109,7 +112,7 @@ const HomePage = () => {
           </p>
         </aside>
       </MainWrapper>
-      {/* <Anmeldung /> */}
+      <Anmeldung />
     </>
   );
 };

@@ -72,14 +72,17 @@ const Anmeldung = () => {
             <h2>Anmeldung wurde verschickt 🙂</h2>
             <p>Vielen Dank für das Interesse an der Computer AG!</p>
             <p>
-              Ich werde mich Anfang Januar bezüglich einer Zu- bzw. Absage bei
-              Ihnen melden.
+              {formMethods.getValues().name} wurde auf die Warteliste
+              aufgenommen.
             </p>
             <p>
-              Bis dahin wünsche ich Ihnen einen guten Start ins neue Jahr 🎉
+              Sobald ein Platz frei wird, werde ich unter den Kindern der
+              Warteliste ein Kind auslosen und mich gegebenenfalls bei Ihnen per
+              E-Mail melden.
             </p>
+            <p>Bis dahin alles Gute 🙂</p>
             <p>
-              Best Grüße!
+              Beste Grüße!
               <br />
               Jörg Lauenroth
             </p>
@@ -146,14 +149,8 @@ const Anmeldung = () => {
             <TextAreaField name="anmerkung" disabled={loading} />
 
             <Submit className={loading ? 'sending' : ''} disabled={!canSubmit}>
-              <span>Anmeldung abschicken</span>
+              <span>Auf Warteliste eintragen</span>
             </Submit>
-            <p className="info">
-              Das Absenden der Anmeldung ist keine Garantie für einen Platz in
-              der Computer AG. Bei mehr als 10 Anmeldungen wird ausgelost. Für
-              jede Anmeldung wird Anfang Januar eine Zu- bzw. Absage per E-Mail
-              verschickt.
-            </p>
             <p className="info">
               Die Daten werden nur für die Anmeldung genutzt und
               selbstverständlich nicht weitergegeben.
