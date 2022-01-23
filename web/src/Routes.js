@@ -13,10 +13,6 @@ import MainLayout from './layouts/MainLayout/MainLayout';
 const Routes = () => {
   return (
     <Router>
-      <Route path="/login" page={LoginPage} name="login" />
-      <Route path="/signup" page={SignupPage} name="signup" />
-      <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
-      <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Route path="/quiz" page={QuizPage} name="quiz" />
       <Route path="/blog/{slug}" page={BlogPostPage} name="blogPost" />
       <Route path="/blog" page={BlogPage} name="blog" />
@@ -26,6 +22,10 @@ const Routes = () => {
       <Route path="/uebersicht" page={UebersichtPage} name="uebersicht" />
       <Route path="/flyer" page={FlyerPage} name="flyer" />
       <Set wrap={MainLayout} isMaxWidth>
+        <Route path="/login" page={LoginPage} name="login" />
+        <Route path="/signup" page={SignupPage} name="signup" />
+        <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
+        <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
         <Route path="/passwort" page={PasswordPage} name="passwort" />
         <Route path="/datenschutz" page={DatenschutzPage} name="datenschutz" />
         <Route path="/impressum" page={ImpressumPage} name="impressum" />
