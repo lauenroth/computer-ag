@@ -22,11 +22,10 @@ const Routes = () => {
       <Route path="/uebersicht" page={UebersichtPage} name="uebersicht" />
       <Route path="/flyer" page={FlyerPage} name="flyer" />
       <Set wrap={MainLayout} isMaxWidth>
-        <Route path="/login" page={LoginPage} name="login" />
-        <Route path="/signup" page={SignupPage} name="signup" />
-        <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
-        <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
-        <Route path="/passwort" page={PasswordPage} name="passwort" />
+        <Route path="/anmelden" page={LoginPage} name="login" />
+        {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
+        {/* <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" /> */}
+        {/* <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" /> */}
         <Route path="/datenschutz" page={DatenschutzPage} name="datenschutz" />
         <Route path="/impressum" page={ImpressumPage} name="impressum" />
       </Set>

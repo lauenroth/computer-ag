@@ -1,46 +1,53 @@
 import styled, { css } from 'styled-components';
 import UserMenu from 'src/components/UserMenu/UserMenu';
+import { useAuth } from '@redwoodjs/auth';
 
 interface Props {
   isMaxWidth?: boolean;
   maxWidth?: 'default' | 'wider';
 }
 
-const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => (
-  <>
-    <UserMenu />
-    <MainHeader className="main">
-      <img
-        src="/images/makey.png"
-        alt="MakeyMakey"
-        className="makey"
-        height="80"
-      />
-      <h1>
-        <a href="/">Computer AG</a>
-        <div>
-          <span>Grundschule</span> am Rüdesheimer Platz
-        </div>
-      </h1>
-      <img src="/images/vr.png" alt="VR Brille" className="vr" />
-    </MainHeader>
-    {isMaxWidth ? (
-      <CenteredWrapper maxWidth={maxWidth}>{children}</CenteredWrapper>
-    ) : (
-      children
-    )}
-    <MainFooter>
-      <ul>
-        <li>
-          <a href="/impressum">Impressum</a>
-        </li>
-        <li>
-          <a href="/datenschutz">Datenschutz</a>
-        </li>
-      </ul>
-    </MainFooter>
-  </>
-);
+const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => {
+  const { isAuthenticated } = useAuth();
+
+  return (
+    <>
+      <UserMenu />
+      <MainHeader className="main">
+        <img
+          src="/images/makey.png"
+          alt="MakeyMakey"
+          className="makey"
+          height="80"
+        />
+        <h1>
+          <a href="/">Computer AG</a>
+          <div>
+            <span>Grundschule</span> am Rüdesheimer Platz
+          </div>
+        </h1>
+        {!isAuthenticated && (
+          <img src="/images/vr.png" alt="VR Brille" className="vr" />
+        )}
+      </MainHeader>
+      {isMaxWidth ? (
+        <CenteredWrapper maxWidth={maxWidth}>{children}</CenteredWrapper>
+      ) : (
+        children
+      )}
+      <MainFooter>
+        <ul>
+          <li>
+            <a href="/impressum">Impressum</a>
+          </li>
+          <li>
+            <a href="/datenschutz">Datenschutz</a>
+          </li>
+        </ul>
+      </MainFooter>
+    </>
+  );
+};
 
 const MainHeader = styled.header`
   align-items: center;
@@ -52,6 +59,7 @@ const MainHeader = styled.header`
   overflow: hidden;
   position: relative;
   transition: 0.25s;
+  z-index: 10;
 
   h1 {
     letter-spacing: 1px;

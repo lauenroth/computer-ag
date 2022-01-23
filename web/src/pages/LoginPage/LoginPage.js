@@ -1,4 +1,4 @@
-import { Link, navigate, routes } from '@redwoodjs/router';
+import { navigate, routes } from '@redwoodjs/router';
 import { useRef } from 'react';
 import {
   Form,
@@ -12,9 +12,11 @@ import { useAuth } from '@redwoodjs/auth';
 import { MetaTags } from '@redwoodjs/web';
 import { toast, Toaster } from '@redwoodjs/web/toast';
 import { useEffect } from 'react';
+import styled from 'styled-components';
 
 const LoginPage = () => {
   const { isAuthenticated, logIn } = useAuth();
+  const [isLoading, setIsLoading] = React.useState(false);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -28,7 +30,9 @@ const LoginPage = () => {
   }, []);
 
   const onSubmit = async (data) => {
+    setIsLoading(true);
     const response = await logIn({ ...data });
+    setIsLoading(false);
 
     if (response.message) {
       toast(response.message);
@@ -43,87 +47,82 @@ const LoginPage = () => {
     <>
       <MetaTags title="Login" />
 
-      <main className="rw-main">
-        <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
-        <div className="rw-scaffold rw-login-container">
-          <div className="rw-segment">
-            <header className="rw-segment-header">
-              <h2 className="rw-heading rw-heading-secondary">Login</h2>
-            </header>
+      <section>
+        <Toaster
+          position="bottom-center"
+          toastOptions={{ className: 'rw-toast', duration: 6000 }}
+        />
 
-            <div className="rw-segment-main">
-              <div className="rw-form-wrapper">
-                <Form onSubmit={onSubmit} className="rw-form-wrapper">
-                  <Label
-                    name="username"
-                    className="rw-label"
-                    errorClassName="rw-label rw-label-error"
-                  >
-                    Username
-                  </Label>
-                  <TextField
-                    name="username"
-                    className="rw-input"
-                    errorClassName="rw-input rw-input-error"
-                    ref={usernameRef}
-                    validation={{
-                      required: {
-                        value: true,
-                        message: 'Username is required',
-                      },
-                    }}
-                  />
+        <LoginWrapper onSubmit={onSubmit}>
+          <h2>Anmeldung</h2>
+          <Label
+            name="username"
+            className="rw-label"
+            errorClassName="rw-label rw-label-error"
+          >
+            Name
+          </Label>
+          <TextField
+            name="username"
+            className="rw-input"
+            errorClassName="rw-input rw-input-error"
+            ref={usernameRef}
+            validation={{
+              required: {
+                value: true,
+                message: 'Benutzername ist erforderlich',
+              },
+            }}
+            disabled={isLoading}
+            required
+          />
 
-                  <FieldError name="username" className="rw-field-error" />
+          <FieldError name="username" className="rw-field-error" />
 
-                  <Label
-                    name="password"
-                    className="rw-label"
-                    errorClassName="rw-label rw-label-error"
-                  >
-                    Password
-                  </Label>
-                  <PasswordField
-                    name="password"
-                    className="rw-input"
-                    errorClassName="rw-input rw-input-error"
-                    autoComplete="current-password"
-                    validation={{
-                      required: {
-                        value: true,
-                        message: 'Password is required',
-                      },
-                    }}
-                  />
+          <Label
+            name="password"
+            className="rw-label"
+            errorClassName="rw-label rw-label-error"
+          >
+            Passwort
+          </Label>
+          <PasswordField
+            name="password"
+            className="rw-input"
+            errorClassName="rw-input rw-input-error"
+            autoComplete="current-password"
+            validation={{
+              required: {
+                value: true,
+                message: 'Passwort ist erforderlich',
+              },
+            }}
+            disabled={isLoading}
+            required
+          />
 
-                  <div className="rw-forgot-link">
-                    <Link
-                      to={routes.forgotPassword()}
-                      className="rw-forgot-link"
-                    >
-                      Forgot Password?
-                    </Link>
-                  </div>
+          {/* <Link to={routes.forgotPassword()} className="rw-forgot-link">
+              Password vergessen?
+            </Link> */}
 
-                  <FieldError name="password" className="rw-field-error" />
+          <FieldError name="password" className="rw-field-error" />
 
-                  <div className="rw-button-group">
-                    <Submit className="rw-button rw-button-blue">Login</Submit>
-                  </div>
-                </Form>
-              </div>
-            </div>
-          </div>
-          <div className="rw-login-link">
-            <span>Don&apos;t have an account?</span>{' '}
-            <Link to={routes.signup()} className="rw-link">
-              Sign up!
-            </Link>
-          </div>
-        </div>
-      </main>
+          <Submit disabled={isLoading}>Anmelden</Submit>
+        </LoginWrapper>
+      </section>
     </>
   );
 };
+
+const LoginWrapper = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  max-width: 450px;
+
+  h2 {
+    text-align: center;
+  }
+`;
 
 export default LoginPage;
