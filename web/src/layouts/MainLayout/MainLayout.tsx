@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import UserMenu from 'src/components/UserMenu/UserMenu';
 
 interface Props {
   isMaxWidth?: boolean;
@@ -7,6 +8,7 @@ interface Props {
 
 const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => (
   <>
+    <UserMenu />
     <MainHeader className="main">
       <img
         src="/images/makey.png"

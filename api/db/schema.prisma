@@ -28,9 +28,11 @@ model BlogPost {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  name      String   @unique
-  password  String
-  salt      String
-  createdAt DateTime @default(now())
+  id                  Int       @id @default(autoincrement())
+  name                String    @unique
+  hashedPassword      String
+  salt                String
+  resetToken          String?
+  resetTokenExpiresAt DateTime?
+  createdAt           DateTime  @default(now())
 }

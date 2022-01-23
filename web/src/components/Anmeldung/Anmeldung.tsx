@@ -178,44 +178,6 @@ const AnmeldungWrapper = styled(Form)`
     text-align: center;
   }
 
-  label {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    gap: 10px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-
-    span {
-      font-size: 10px;
-    }
-  }
-
-  label input:disabled {
-    color: #ccc;
-  }
-
-  input,
-  select,
-  textarea {
-    border: 1px solid #457b9d;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 1em;
-    margin-bottom: 20px;
-    padding: 10px;
-    width: 100%;
-
-    &:disabled {
-      background-color: var(--color-background-secondary);
-      color: #ccc;
-    }
-  }
-
-  textarea {
-    height: 5em;
-  }
-
   .info {
     font-size: 12px;
     margin-bottom: 10px;
