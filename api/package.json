@@ -5,6 +5,7 @@
   "dependencies": {
     "@redwoodjs/api": "^0.39.4",
     "@redwoodjs/graphql-server": "^0.39.4",
-    "crypto-js": "^4.1.1"
+    "crypto-js": "^4.1.1",
+    "react-toastify": "^8.1.0"
   }
 }

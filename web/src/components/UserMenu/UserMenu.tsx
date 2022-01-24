@@ -1,9 +1,10 @@
 import { useAuth } from '@redwoodjs/auth';
+import { navigate, routes } from '@redwoodjs/router';
 import styled, { css } from 'styled-components';
 
 const UserMenu = () => {
   const { logOut, isAuthenticated, currentUser } = useAuth();
-  const [showMenu, setShowMenu] = React.useState(true);
+  const [showMenu, setShowMenu] = React.useState(false);
 
   return isAuthenticated ? (
     <>
@@ -19,11 +20,18 @@ const UserMenu = () => {
       <MenuWrapper showMenu={showMenu}>
         <ul>
           <li>
-            <a href="/uebersicht">Meine AG</a>
+            <button
+              onClick={() => {
+                setShowMenu(false);
+                navigate(routes.meineAg());
+              }}
+            >
+              Meine AG
+            </button>
           </li>
-          <li>
+          {/* <li>
             <a href="/profil">Mein Profil</a>
-          </li>
+          </li> */}
           <li>
             <button onClick={logOut}>Abmelden</button>
           </li>
