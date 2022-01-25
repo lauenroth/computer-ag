@@ -7,9 +7,9 @@ export const schema = gql`
     user: [User]!
   }
 
-  type Query {
-    latestMembers: [Profile!]
-  }
+  # type Query {
+  # latestMembers: [Profile!]
+  # }
 
   input CreateProfileInput {
     avatar: String
