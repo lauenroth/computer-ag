@@ -26,9 +26,7 @@ const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => {
             <span>Grundschule</span> am Rüdesheimer Platz
           </div>
         </h1>
-        {!isAuthenticated && (
-          <img src="/images/vr.png" alt="VR Brille" className="vr" />
-        )}
+        <img src="/images/vr.png" alt="VR Brille" className="vr" />
       </MainHeader>
       {isMaxWidth ? (
         <CenteredWrapper maxWidth={maxWidth}>{children}</CenteredWrapper>
@@ -89,7 +87,7 @@ const MainHeader = styled.header`
   .vr {
     height: 90px;
     position: absolute;
-    right: 30px;
+    left: 30px;
     top: 25px;
     transition: top 0.25s;
   }

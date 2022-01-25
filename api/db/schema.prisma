@@ -32,7 +32,18 @@ model User {
   name                String    @unique
   hashedPassword      String
   salt                String
+  avatar              String    @default("https://avataaars.io/?avatarStyle=Transparent")
   resetToken          String?
   resetTokenExpiresAt DateTime?
   createdAt           DateTime  @default(now())
+  // profileId           Int
+  // profile             Profile   @relation(fields: [profileId], references: [id])
+}
+
+model Profile {
+  id      Int     @id @default(autoincrement())
+  avatar  String  @default("https://avataaars.io/?avatarStyle=Transparent")
+  klasse  String
+  hobbies String?
+  // User    User[]
 }

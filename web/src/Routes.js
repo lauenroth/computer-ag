@@ -25,9 +25,12 @@ const Routes = () => {
         <Route path="/meine-ag" page={MeineAGPage} name="meineAg" />
         <Route path="/schreiben" page={SchreibenPage} name="schreiben" />
       </Set>
+      <Set private wrap={MainLayout} isMaxWidth unauthenticated="login" maxWidth="default">
+        <Route path="/profil" page={ProfilPage} name="profil" />
+      </Set>
       <Set wrap={MainLayout} isMaxWidth>
         <Route path="/anmelden" page={LoginPage} name="login" />
-        {/* <Route path="/signup" page={SignupPage} name="signup" /> */}
+        <Route path="/signup" page={SignupPage} name="signup" />
         {/* <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" /> */}
         {/* <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" /> */}
         <Route path="/datenschutz" page={DatenschutzPage} name="datenschutz" />

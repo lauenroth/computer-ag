@@ -1,5 +1,5 @@
 import { useAuth } from '@redwoodjs/auth';
-import { navigate, routes } from '@redwoodjs/router';
+import { Link, navigate, routes } from '@redwoodjs/router';
 import styled, { css } from 'styled-components';
 
 const UserMenu = () => {
@@ -9,12 +9,9 @@ const UserMenu = () => {
   return isAuthenticated ? (
     <>
       <AvatarButton onClick={() => setShowMenu(!showMenu)}>
-        Hallo {currentUser.name}!
+        Hallo {currentUser?.name}!
         <Avatar>
-          <img
-            src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Gray02&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
-            alt={currentUser.name}
-          />
+          <img src={currentUser?.avatar} alt={currentUser?.name} />
         </Avatar>
       </AvatarButton>
       <MenuWrapper showMenu={showMenu}>
@@ -29,16 +26,31 @@ const UserMenu = () => {
               Meine AG
             </button>
           </li>
-          {/* <li>
-            <a href="/profil">Mein Profil</a>
-          </li> */}
+          <li>
+            <button
+              onClick={() => {
+                setShowMenu(false);
+                navigate(routes.profil());
+              }}
+            >
+              Mein Profil
+            </button>
+          </li>
           <li>
             <button onClick={logOut}>Abmelden</button>
           </li>
         </ul>
       </MenuWrapper>
     </>
-  ) : null;
+  ) : (
+    <Link
+      to={routes.login()}
+      className="btn btn-primary"
+      style={{ position: 'absolute', top: '26px', right: '30px', zIndex: '20' }}
+    >
+      Anmelden
+    </Link>
+  );
 };
 
 const AvatarButton = styled.button`

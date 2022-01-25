@@ -69,19 +69,43 @@ const MeineAgPage = () => {
             <h3>Weitere interessante Links</h3>
             <ul>
               <li>
-                <a href="https://klexikon.zum.de">Klexikon</a>
+                <a
+                  href="https://klexikon.zum.de"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Klexikon
+                </a>
                 <p>Online-Lexikon für Kinder</p>
               </li>
               <li>
-                <a href="https://www.fragfinn.de/">fragFINN</a>
+                <a
+                  href="https://www.fragfinn.de/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  fragFINN
+                </a>
                 <p>Suchmaschine für Kinder</p>
               </li>
               <li>
-                <a href="https://www.blinde-kuh.de/">Blinde Kuh</a>
+                <a
+                  href="https://www.blinde-kuh.de/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Blinde Kuh
+                </a>
                 <p>Suchmaschine für Kinder</p>
               </li>
               <li>
-                <a href="https://scratch.mit.edu/">Scratch</a>
+                <a
+                  href="https://scratch.mit.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Scratch
+                </a>
                 <p>Programmiersprache (Englisch)</p>
               </li>
             </ul>
