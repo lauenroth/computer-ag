@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import UserMenu from 'src/components/UserMenu/UserMenu';
-import { useAuth } from '@redwoodjs/auth';
 
 interface Props {
   isMaxWidth?: boolean;
@@ -8,8 +7,6 @@ interface Props {
 }
 
 const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => {
-  const { isAuthenticated } = useAuth();
-
   return (
     <>
       <UserMenu />
@@ -89,6 +86,7 @@ const MainHeader = styled.header`
     position: absolute;
     left: 30px;
     top: 25px;
+    transform: scaleX(-1);
     transition: top 0.25s;
   }
 
