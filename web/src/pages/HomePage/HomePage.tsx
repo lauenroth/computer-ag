@@ -104,7 +104,7 @@ const HomePage = () => {
           <p>
             Meine beiden Töchter gehen auf die Grundschule am Rüdesheimer Platz,
             daher versuche ich mich dort zu engagieren - seit Anfang 2020 im
-            Förderverein und ab Anfang 2022 mit der Computer AG.
+            Förderverein und seit Januar 2022 mit der Computer AG.
           </p>
           <p>
             Bei Fragen oder Anregungen erreichen Sie mich am besten per E-Mail
