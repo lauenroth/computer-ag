@@ -23,7 +23,7 @@ const UserMenu = () => {
                 navigate(routes.meineAg());
               }}
             >
-              Meine AG
+              Deine AG
             </button>
           </li>
           <li>
@@ -33,7 +33,7 @@ const UserMenu = () => {
                 navigate(routes.profil());
               }}
             >
-              Mein Profil
+              Dein Profil
             </button>
           </li>
           <li>
@@ -43,11 +43,7 @@ const UserMenu = () => {
       </MenuWrapper>
     </>
   ) : (
-    <Link
-      to={routes.login()}
-      className="btn btn-primary"
-      style={{ position: 'absolute', top: '26px', right: '30px', zIndex: '20' }}
-    >
+    <Link to={routes.login()} className="btn btn-primary login-button">
       Anmelden
     </Link>
   );
