@@ -57,6 +57,28 @@ const MeineAgPage = () => {
               Zur Präsentation
             </a>
           </p> */}
+
+          <h2>Aufgabe:</h2>
+
+          <ol>
+            <li>Öffne das Programm &quot;Writer&quot; von LibreOffice.</li>
+            <li>
+              Gehe zu der Webseite mit dem Gedicht &quot;Die Made&quot; von
+              Heinz Erhardt (siehe Link rechts).
+            </li>
+            <li>Kopiere alle Strophen des Gedichts zu LibreOffice Writer.</li>
+            <li>Mache den Text linksbündig.</li>
+            <li>
+              Markiere die Überschrift &quot;Die Made&quot; und mache sie zur
+              Überschrift 1 (Heading 1).
+            </li>
+            <li>Mache alle Reimwörter fett und kursiv.</li>
+            <li>Gib jeder Strophe eine andere Text- und Hintergrundfarbe.</li>
+            <li>
+              Speicher das Gedicht unter &quot;Die Made - Heinz
+              Erhardt.odt&quot;.
+            </li>
+          </ol>
         </div>
 
         <aside>
