@@ -1,3 +1,4 @@
+import { Link, routes } from '@redwoodjs/router';
 import { MetaTags } from '@redwoodjs/web';
 import Anmeldung from 'src/components/Anmeldung/Anmeldung';
 import styled from 'styled-components';
@@ -17,6 +18,12 @@ const HomePage = () => {
             den Umgang mit Computern spielerisch nahezubringen. Neben
             theoretischen Themen wird es immer auch die Möglichkeit geben, das
             Erlernte praktisch anzuwenden.
+          </p>
+
+          <p>
+            <Link to={routes.meineAg()} className="btn btn-primary">
+              Zur aktuellen Stunde
+            </Link>
           </p>
 
           <h2>

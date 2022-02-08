@@ -2,7 +2,7 @@ import { MetaTags } from '@redwoodjs/web';
 import styled from 'styled-components';
 import Breadcrumb from 'src/components/Breadcrumb/Breadcrumb';
 import { useAuth } from '@redwoodjs/auth';
-import { Link, routes } from '@redwoodjs/router';
+// import { Link, routes } from '@redwoodjs/router';
 
 const breadcumbItems = [
   {
@@ -21,7 +21,22 @@ const MeineAgPage = () => {
         <div>
           <h1>Meine AG</h1>
           <p>Hallo {currentUser?.name} 👋</p>
+
           <p>
+            Hier findest du alles zur aktuellen Unterrichtsstunde vom 8.2.2022.
+          </p>
+          <p>
+            <a
+              href="https://slides.com/d/gXzWKDs/live"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+            >
+              Zur Präsentation
+            </a>
+          </p>
+
+          {/* <p>
             Hier findest du alles zur aktuellen Unterrichtsstunde vom 25.1.2022.
           </p>
           <p>
@@ -41,7 +56,7 @@ const MeineAgPage = () => {
             >
               Zur Präsentation
             </a>
-          </p>
+          </p> */}
         </div>
 
         <aside>
@@ -50,18 +65,27 @@ const MeineAgPage = () => {
             <ul>
               <li>
                 <a
-                  href="https://slides.com/d/9q3svD4/live"
+                  href="https://slides.com/d/gXzWKDs/live"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Präsentation
                 </a>
-                <p>EVA, Tastaturen</p>
+                <p>Dateien, Speicher</p>
               </li>
               <li>
+                <a
+                  href="http://www.gedichtsuche.de/gedicht/items/Die%20Made%20-%20Erhardt,%20Heinz.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Die Made (Gedicht)
+                </a>
+              </li>
+              {/* <li>
                 <Link to={routes.schreiben()}>Schreibtest</Link>
                 <p>Teste deine Schreibkenntnisse</p>
-              </li>
+              </li> */}
             </ul>
           </section>
 
