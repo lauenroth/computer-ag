@@ -22,7 +22,6 @@ const Routes = () => {
       <Route path="/uebersicht" page={UebersichtPage} name="uebersicht" />
       <Route path="/flyer" page={FlyerPage} name="flyer" />
       <Set private wrap={MainLayout} isMaxWidth unauthenticated="login">
-        <Route path="/meine-ag" page={MeineAGPage} name="meineAg" />
         <Route path="/schreiben" page={SchreibenPage} name="schreiben" />
       </Set>
       <Set private wrap={MainLayout} isMaxWidth unauthenticated="login" maxWidth="default">
@@ -33,6 +32,8 @@ const Routes = () => {
         <Route path="/signup" page={SignupPage} name="signup" />
         {/* <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" /> */}
         {/* <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" /> */}
+
+        <Route path="/meine-ag" page={MeineAGPage} name="meineAg" />
         <Route path="/datenschutz" page={DatenschutzPage} name="datenschutz" />
         <Route path="/impressum" page={ImpressumPage} name="impressum" />
       </Set>
