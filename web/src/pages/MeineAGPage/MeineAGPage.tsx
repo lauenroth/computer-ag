@@ -93,6 +93,22 @@ const MeineAgPage = () => {
               </a>
             </p>
           </section>
+
+          <section className="stunde">
+            <header>
+              <h2>Erste Stunde 🎉</h2>
+              <p>18.1.2022</p>
+            </header>
+            <p>
+              Heute war es noch ziemlich chaotisch. Am Anfang war noch nicht
+              klar, ob wir Zugang zu den Computern haben, aber dann hat es doch
+              für die meisten Kinder geklappt.
+            </p>
+            <p>
+              Nach einer Kennenlernrunde haben wir darüber gesprochen, wo es
+              überall Computer gibt und aus welchen Teilen Computer bestehen.
+            </p>
+          </section>
         </div>
 
         <aside>
