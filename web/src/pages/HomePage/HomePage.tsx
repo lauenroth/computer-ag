@@ -22,8 +22,9 @@ const HomePage = () => {
 
           <p>
             <Link to={routes.meineAg()} className="btn btn-primary">
-              Zur aktuellen Stunde
+              Zur Kursübersicht
             </Link>
+            
           </p>
 
           <h2>

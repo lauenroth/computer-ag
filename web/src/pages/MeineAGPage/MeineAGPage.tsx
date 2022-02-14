@@ -1,7 +1,7 @@
 import { MetaTags } from '@redwoodjs/web';
 import styled from 'styled-components';
 import Breadcrumb from 'src/components/Breadcrumb/Breadcrumb';
-import { useAuth } from '@redwoodjs/auth';
+// import { useAuth } from '@redwoodjs/auth';
 // import { Link, routes } from '@redwoodjs/router';
 
 const breadcumbItems = [
@@ -11,7 +11,7 @@ const breadcumbItems = [
 ];
 
 const MeineAgPage = () => {
-  const { currentUser } = useAuth();
+  // const { currentUser } = useAuth();
 
   return (
     <>
@@ -20,69 +20,83 @@ const MeineAgPage = () => {
       <Wrapper>
         <div>
           <h1>Meine AG</h1>
-          <p>Hallo {currentUser?.name} 👋</p>
+          {/* <p>Hallo {currentUser?.name} 👋</p> */}
 
-          <p>
-            Hier findest du alles zur aktuellen Unterrichtsstunde vom 8.2.2022.
-          </p>
-          <p>
-            <a
-              href="https://slides.com/d/gXzWKDs/live"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary"
-            >
-              Zur Präsentation
-            </a>
-          </p>
+          <section className="stunde">
+            <header>
+              <h2>Daten, Speicher</h2>
+              <p>8.2.2022</p>
+            </header>
+            <p>
+              <a
+                href="https://slides.com/d/gXzWKDs/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Zur Präsentation
+              </a>
+            </p>
 
-          {/* <p>
-            Hier findest du alles zur aktuellen Unterrichtsstunde vom 25.1.2022.
-          </p>
-          <p>
-            Heute erinnern wir uns an <strong>&quot;EVA&quot;</strong>. Wofür
-            stehen die einzelnen Buchstaben? Was gibt es für Beispiele?
-          </p>
-          <p>
-            Was ist eine Tastatur? Was gibt es für Unterschiede? Was bedeuten
-            die Tasten?
-          </p>
-          <p>
-            <a
-              href="https://slides.com/d/9q3svD4/live"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary"
-            >
-              Zur Präsentation
-            </a>
-          </p> */}
+            <h3>Aufgabe:</h3>
 
-          <h2>Aufgabe:</h2>
+            <ol>
+              <li>Öffne das Programm &quot;Writer&quot; von LibreOffice.</li>
+              <li>
+                Gehe zu der Webseite mit dem Gedicht &quot;Die Made&quot; von
+                Heinz Erhardt (
+                <a
+                  href="http://www.gedichtsuche.de/gedicht/items/Die%20Made%20-%20Erhardt,%20Heinz.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Link
+                </a>
+                ).
+              </li>
+              <li>Kopiere alle Strophen des Gedichts zu LibreOffice Writer.</li>
+              <li>Mache den Text linksbündig.</li>
+              <li>
+                Markiere die Überschrift &quot;Die Made&quot; und mache sie zur
+                Überschrift 1 (Heading 1).
+              </li>
+              <li>Mache alle Reimwörter fett und kursiv.</li>
+              <li>Gib jeder Strophe eine andere Text- und Hintergrundfarbe.</li>
+              <li>
+                Speicher das Gedicht unter &quot;Die Made - Heinz
+                Erhardt.odt&quot;.
+              </li>
+            </ol>
+          </section>
 
-          <ol>
-            <li>Öffne das Programm &quot;Writer&quot; von LibreOffice.</li>
-            <li>
-              Gehe zu der Webseite mit dem Gedicht &quot;Die Made&quot; von
-              Heinz Erhardt (siehe Link rechts).
-            </li>
-            <li>Kopiere alle Strophen des Gedichts zu LibreOffice Writer.</li>
-            <li>Mache den Text linksbündig.</li>
-            <li>
-              Markiere die Überschrift &quot;Die Made&quot; und mache sie zur
-              Überschrift 1 (Heading 1).
-            </li>
-            <li>Mache alle Reimwörter fett und kursiv.</li>
-            <li>Gib jeder Strophe eine andere Text- und Hintergrundfarbe.</li>
-            <li>
-              Speicher das Gedicht unter &quot;Die Made - Heinz
-              Erhardt.odt&quot;.
-            </li>
-          </ol>
+          <section className="stunde">
+            <header>
+              <h2>EVA, Tastatur</h2>
+              <p>25.1.2022</p>
+            </header>
+            <p>
+              Heute erinnern wir uns an <strong>&quot;EVA&quot;</strong>. Wofür
+              stehen die einzelnen Buchstaben? Was gibt es für Beispiele?
+            </p>
+            <p>
+              Was ist eine Tastatur? Was gibt es für Unterschiede? Was bedeuten
+              die Tasten?
+            </p>
+            <p>
+              <a
+                href="https://slides.com/d/9q3svD4/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Zur Präsentation
+              </a>
+            </p>
+          </section>
         </div>
 
         <aside>
-          <section>
+          <section style={{ display: 'none' }}>
             <h3>Links zur aktuellen Stunde</h3>
             <ul>
               <li>
@@ -94,15 +108,6 @@ const MeineAgPage = () => {
                   Präsentation
                 </a>
                 <p>Dateien, Speicher</p>
-              </li>
-              <li>
-                <a
-                  href="http://www.gedichtsuche.de/gedicht/items/Die%20Made%20-%20Erhardt,%20Heinz.html"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Die Made (Gedicht)
-                </a>
               </li>
               {/* <li>
                 <Link to={routes.schreiben()}>Schreibtest</Link>
@@ -166,6 +171,27 @@ const Wrapper = styled.main`
   display: grid;
   gap: 30px;
   grid-template-columns: auto 260px;
+
+  .stunde {
+    background-color: var(--color-background-secondary);
+    border-radius: 10px;
+    color: var(--color-background);
+    margin: 30px 0 30px;
+    padding: 20px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .datum {
+      /* float: right; */
+    }
+  }
 
   aside {
     position: sticky;
