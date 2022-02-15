@@ -24,6 +24,42 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>Das Internet</h2>
+              <p>15.2.2022</p>
+            </header>
+            <ul>
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=uIZh2v7YpP4"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Eine kurze Geschichte des Internets
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://slides.com/d/L2n4SQo/live"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Präsentation: Das Internet
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.kaufda.de/info/apps-in-echtzeit/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Apps in Echtzeit
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>Daten, Speicher</h2>
               <p>8.2.2022</p>
             </header>
@@ -133,7 +169,7 @@ const MeineAgPage = () => {
           </section>
 
           <section>
-            <h3>Weitere interessante Links</h3>
+            <h3>Suchen im Internet</h3>
             <ul>
               <li>
                 <a
@@ -164,6 +200,26 @@ const MeineAgPage = () => {
                   Blinde Kuh
                 </a>
                 <p>Suchmaschine für Kinder</p>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Programmierung</h3>
+            <ul>
+              <li>
+                <a href="/html">HTML Referenz</a>
+                <p>Wichtige HTML Elemente</p>
+              </li>
+              <li>
+                <a
+                  href="https://jsfiddle.net/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  JSFiddle
+                </a>
+                <p>Spielwiese für HTML, CSS, JavaScript</p>
               </li>
               <li>
                 <a
@@ -202,10 +258,6 @@ const Wrapper = styled.main`
 
     h2 {
       margin-top: 0;
-    }
-
-    .datum {
-      /* float: right; */
     }
   }
 
