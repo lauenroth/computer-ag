@@ -55,7 +55,54 @@ const MeineAgPage = () => {
                   Apps in Echtzeit
                 </a>
               </li>
+              <li>
+                <a
+                  href="http://172.217.11.174"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  172.217.11.174 (Google)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  selfhtml
+                </a>
+              </li>
             </ul>
+            <h3>Text für die HTML Aufgabe</h3>
+            <p>Herzlich Willkommen!</p>
+
+            <p>Mein Name ist Jörg. Dies ist meine allererste Webseite!</p>
+
+            <p>
+              Seit Januar 2022 nehme ich an der Computer AG an der Grundschule
+              am Rüdesheimer Platz teil.
+            </p>
+
+            <p>Meine Hobbies sind:</p>
+
+            <p>
+              - Gitarre spielen
+              <br />
+              - Lesen
+              <br />
+              - Radfahren
+              <br />- Skifahren
+            </p>
+
+            <p>Meine Lieblingsfächer sind:</p>
+
+            <p>
+              - Mathematik
+              <br />
+              - Englisch
+              <br />- Sport
+            </p>
           </section>
 
           <section className="stunde">
