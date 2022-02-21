@@ -1,11 +1,17 @@
 import { useAuth } from '@redwoodjs/auth';
-import { Form, Label, Submit, TextField } from '@redwoodjs/forms';
+import {
+  Form,
+  Label,
+  Submit,
+  TextAreaField,
+  TextField,
+} from '@redwoodjs/forms';
 import { MetaTags } from '@redwoodjs/web';
 import Breadcrumb from 'src/components/Breadcrumb/Breadcrumb';
 
 const breadcumbItems = [
   {
-    name: 'Mein Profil',
+    name: 'Dein Profil',
   },
 ];
 
@@ -26,10 +32,10 @@ const ProfilPage = () => {
 
   return (
     <>
-      <MetaTags title="Mein Profil | Computer AG" />
+      <MetaTags title="Dein Profil | Computer AG" />
       <Breadcrumb items={breadcumbItems} />
       <section>
-        <h1>Mein Profil</h1>
+        <h1>Dein Profil</h1>
         <p>
           Hier kannst du dein Profil anpassen. Momentan kannst du nur dein
           Avatar (also dein Profilbild) ändern.
@@ -38,6 +44,9 @@ const ProfilPage = () => {
         <Form onSubmit={onSubmit}>
           <Label name="Avatar" />
           <TextField name="avatar" defaultValue={currentUser.avatar} />
+
+          <Label name="Hobbies" />
+          <TextAreaField name="hobbies" />
 
           <Submit>Speichern</Submit>
         </Form>
