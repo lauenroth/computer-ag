@@ -136,3 +136,33 @@ nav ul a:focus {
   background-color: var(--color-background);
   text-decoration: none;
 }
+
+
+ul.hobbies {
+  display: grid;
+  list-style: none;
+  gap: 30px;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+ul.hobbies li {
+  align-items: center;
+  background-color: var(--color-background-secondary);
+  border-radius: 4px;
+  color: var(--color-background);
+  flex-direction: column;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: bold;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  transition: .25s;
+}
+ul.hobbies img {
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+ul.hobbies p {
+  margin-bottom: 0;
+}
