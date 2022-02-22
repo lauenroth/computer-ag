@@ -34,9 +34,11 @@ const Routes = () => {
         {/* <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" /> */}
 
         <Route path="/meine-ag" page={MeineAGPage} name="meineAg" />
-        <Route path="/html" page={HtmlPage} name="html" />
         <Route path="/datenschutz" page={DatenschutzPage} name="datenschutz" />
         <Route path="/impressum" page={ImpressumPage} name="impressum" />
+      </Set>
+      <Set wrap={MainLayout} isMaxWidth hasSidebar>
+        <Route path="/html" page={HtmlPage} name="html" />
       </Set>
       <Set wrap={MainLayout}>
         <Route path="/" page={HomePage} name="home" />

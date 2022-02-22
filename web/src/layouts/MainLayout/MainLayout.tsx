@@ -1,12 +1,25 @@
+import { FC } from 'react';
 import styled, { css } from 'styled-components';
 import UserMenu from 'src/components/UserMenu/UserMenu';
 
 interface Props {
   isMaxWidth?: boolean;
   maxWidth?: 'default' | 'wider';
+  hasSidebar?: boolean;
 }
 
-const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => {
+const MainLayout: FC<Props> = ({
+  children,
+  isMaxWidth,
+  maxWidth,
+  hasSidebar,
+}) => {
+  const content = hasSidebar ? (
+    <SidebarWrapper>{children}</SidebarWrapper>
+  ) : (
+    children
+  );
+
   return (
     <>
       <UserMenu />
@@ -26,9 +39,9 @@ const MainLayout: React.FC<Props> = ({ children, isMaxWidth, maxWidth }) => {
         <img src="/images/vr.png" alt="VR Brille" className="vr" />
       </MainHeader>
       {isMaxWidth ? (
-        <CenteredWrapper maxWidth={maxWidth}>{children}</CenteredWrapper>
+        <CenteredWrapper maxWidth={maxWidth}>{content}</CenteredWrapper>
       ) : (
-        children
+        content
       )}
       <MainFooter>
         <ul>
@@ -130,6 +143,45 @@ const MainHeader = styled.header`
       &:hover {
         top: 20px;
       }
+    }
+  }
+`;
+
+const SidebarWrapper = styled.main`
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto 260px;
+
+  aside {
+    position: sticky;
+    top: 30px;
+
+    section {
+      background-color: var(--color-background-secondary);
+      border-radius: 10px;
+      color: var(--color-background);
+      margin: 30px 0 auto;
+      padding: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      font-size: 0.9rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    a:hover {
+      color: var(--color-background);
+      text-decoration: none;
     }
   }
 `;
