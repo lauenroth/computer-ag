@@ -13,7 +13,7 @@ const HtmlPage = () => {
 
         <hr />
 
-        <section>
+        <section id="ueberschriften">
           <h2>Überschriften</h2>
           <p>
             Überschriften werden als Titel für einen Textabschnitt genutzt
@@ -32,7 +32,7 @@ const HtmlPage = () => {
 
         <hr />
 
-        <section>
+        <section id="paragraph">
           <h2>Paragraphen</h2>
           <p>Texte werden in Absätzen gruppiert, den Paragraphen.</p>
           <code>
@@ -47,7 +47,7 @@ const HtmlPage = () => {
 
         <hr />
 
-        <section>
+        <section id="listen">
           <h2>Listen</h2>
           <p>Es gibt zwei Arten von Listen in HTML:</p>
           <ul>
@@ -80,20 +80,30 @@ const HtmlPage = () => {
 
         <section>
           <h2>Links</h2>
-          <p>Ein Link ist ein Verweis auf eine andere Webseite.</p>
+          <p>Ein Link ist ein Verweis auf eine andere Webseite (oder Datei).</p>
           <code>
             &lt;a href=&quot;https://computer-ag.com&quot;&gt;Website der
             Computer AG&lt;/a&gt;
           </code>
+          <p>
+            <strong>href</strong> gibt das Ziel für den Link an, z.B. eine
+            Webseite.
+          </p>
         </section>
       </section>
 
       <aside>
         <section>
-          <h3>HTML Kurs</h3>
+          <h3>Inhalt</h3>
           <ul>
             <li>
-              <Link to={routes.html()}>Einführung</Link>
+              <a href="#ueberschriften">Überschriften</a>
+            </li>
+            <li>
+              <a href="#paragraph">Paragraphen</a>
+            </li>
+            <li>
+              <a href="#listen">Listen</a>
             </li>
           </ul>
         </section>

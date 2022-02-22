@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+
+:root {
+	--color-background: #1d3557;
+	--color-text: #f1faee;
+	--color-secondary: rgb(221, 238, 255);
+	--color-ternary: #457b9d;
+	--color-highlight: #e63946;
+  --color-background-secondary: #f5f5f5;
+	--color-border: rgba(221, 238, 255, 0.2);
+	--max-width: 800px;
+}
+
+* {
+	font-family: Comfortaa, Helvetica, Verdana, sans-serif;
+}
+
+html,
+body {
+	background-color: var(--color-background);
+	box-sizing: border-box;
+	color: var(--color-text);
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+body {
+  padding: 30px;
+}
+
+a {
+	color: var(--color-ternary);
+  font-family: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-family: 'Cabin Sketch', Helvetica, cursive;
+	font-size: 38px;
+	font-weight: normal;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Cabin Sketch', Helvetica, cursive;
+}
+
+
+p {
+	line-height: 1.5;
+	margin: 0 0 20px;
+}
+
+li {
+  line-height: 1.5;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  margin: 30px auto;
+  width: 30%;
+}
+
+main {
+	margin: 0 auto;
+	max-width: var(--max-width);
+  min-height: calc(100vh - 195px);
+	position: relative;
+	z-index: 2;
+}
+
+
+table {
+  width: 100%;
+}
+
+th {
+  background-color: var(--color-background-secondary);
+  color: var(--color-background);
+}
+th:empty {
+  background-color: transparent;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  background-color: rgba(221, 238, 255, .2);
+}
+
+
+nav {
+  align-items: center;
+  background-color: var(--color-background-secondary);
+  color: var(--color-background);
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 30px;
+}
+nav h1 a {
+  color: var(--color-background);
+  text-decoration: none;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+nav ul a {
+  background-color: var(--color-ternary);
+  border-radius: 4px;
+  color: var(--color-background-secondary);
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: .25s;
+}
+
+nav ul a:hover,
+nav ul a:focus {
+  background-color: var(--color-background);
+  text-decoration: none;
+}

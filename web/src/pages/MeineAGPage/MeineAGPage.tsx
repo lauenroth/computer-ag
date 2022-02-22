@@ -24,9 +24,64 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>HTML</h2>
+              <p>22.02.2022</p>
+            </header>
+            <p>
+              Nachdem wir in der letzten Woche schon etwas über das Internet und
+              HTML gesprochen haben, geht es heute so richtig los. Wir bauen
+              unsere erste eigene Homepage!
+            </p>
+            <p>
+              Die erste Webseite auf der ganzen Welt wurde übrigens in Europa
+              erstellt und ist{' '}
+              <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">
+                immer noch online
+              </a>
+              !
+            </p>
+
+            <h3>Links zur HTML Stunde</h3>
+            <ul>
+              <li>
+                <a href="/html">HTML Referenz</a>
+              </li>
+              <li>
+                <a
+                  href="https://pixabay.com/de/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Kostenlose Bilder
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Selfhtml
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>Das Internet</h2>
               <p>15.2.2022</p>
             </header>
+            <p>
+              <a
+                href="https://slides.com/d/L2n4SQo/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Präsentation: Das Internet
+              </a>
+            </p>
             <ul>
               <li>
                 <a
@@ -35,15 +90,6 @@ const MeineAgPage = () => {
                   rel="noreferrer"
                 >
                   Eine kurze Geschichte des Internets
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://slides.com/d/L2n4SQo/live"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Präsentation: Das Internet
                 </a>
               </li>
               <li>
@@ -64,15 +110,6 @@ const MeineAgPage = () => {
                   172.217.11.174 (Google)
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  selfhtml
-                </a>
-              </li>
             </ul>
             <h3>Text für die HTML Aufgabe</h3>
             <p>Herzlich Willkommen!</p>
@@ -88,8 +125,6 @@ const MeineAgPage = () => {
 
             <p>
               - Gitarre spielen
-              <br />
-              - Lesen
               <br />
               - Radfahren
               <br />- Skifahren
@@ -110,6 +145,11 @@ const MeineAgPage = () => {
               <h2>Daten, Speicher</h2>
               <p>8.2.2022</p>
             </header>
+            <p>
+              Was sind Daten? Was für Arten von Dateien gibt es? Bit, Byte, 0,
+              1? Warum braucht man ein Speichermedium beim Computer und was für
+              Arten gibt (bzw. gab) es?
+            </p>
             <p>
               <a
                 href="https://slides.com/d/gXzWKDs/live"
