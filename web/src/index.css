@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 :root {
 	--color-background: #1d3557;
@@ -83,7 +84,10 @@ h1 {
 	font-weight: normal;
 }
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Cabin Sketch', Helvetica, cursive;
 }
 
@@ -98,6 +102,26 @@ a {
 
 li {
   line-height: 1.5;
+}
+
+code {
+  background-color: #222;
+  border-radius: 5px;
+  color: var(--color-background-secondary);
+  display: block;
+  font-family: 'Fira Code', monospace;
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin: 0 0 20px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  margin: 30px auto;
+  width: 30%;
 }
 
 main {
