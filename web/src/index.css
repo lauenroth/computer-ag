@@ -31,6 +31,7 @@ body {
 
 a {
 	color: var(--color-ternary);
+  font-family: inherit;
 	text-decoration: none;
 }
 
@@ -94,10 +95,6 @@ h6 {
 p {
 	line-height: 1.5;
 	margin: 0 0 20px;
-}
-
-a {
-	font-family: inherit;
 }
 
 li {
