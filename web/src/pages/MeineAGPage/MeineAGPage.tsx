@@ -24,6 +24,20 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>HTML - weiter geht&rsquo;s</h2>
+              <p>1.3.2022</p>
+            </header>
+            <p>Heute arbeiten wir weiter an den persönlichen Webseiten.</p>
+            <p>
+              Als Template (Schablone) kann man folgende Seiten verwenden:{' '}
+              <a href="/webseite.html" target="_blank" rel="noreferrer">
+                webseite.html
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>HTML</h2>
               <p>22.02.2022</p>
             </header>

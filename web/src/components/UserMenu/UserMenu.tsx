@@ -23,7 +23,7 @@ const UserMenu = () => {
                 navigate(routes.meineAg());
               }}
             >
-              Deine AG
+              Meine AG
             </button>
           </li>
           <li>
@@ -33,7 +33,7 @@ const UserMenu = () => {
                 navigate(routes.profil());
               }}
             >
-              Dein Profil
+              Mein Profil
             </button>
           </li>
           <li>

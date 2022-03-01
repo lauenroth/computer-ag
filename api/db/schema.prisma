@@ -36,17 +36,36 @@ model User {
   resetToken          String?
   resetTokenExpiresAt DateTime?
   createdAt           DateTime  @default(now())
-  profileId           Int       @default(1)
-  profile             Profile   @relation(fields: [profileId], references: [id])
+  // profileId           Int       @default(1)
+  // profile             Profile   @relation(fields: [profileId], references: [id])
+  // websiteId           Int?
+  // website             Website?  @relation(fields: [websiteId], references: [id])
 }
 
-model Profile {
-  id       Int     @id @default(autoincrement())
-  slug     String  @unique
-  vorname  String
-  nachname String
-  avatar   String  @default("https://avataaars.io/?avatarStyle=Transparent")
-  klasse   String
-  hobbies  String?
-  User     User[]
+model Website {
+  id        Int      @id @default(autoincrement())
+  name      String
+  slug      String   @unique
+  design    String   @default("default")
+  createdAt DateTime @default(now())
 }
+
+model Webseite {
+  id        Int      @id @default(autoincrement())
+  name      String
+  slug      String   @unique
+  design    String   @default("default")
+  html      String
+  createdAt DateTime @default(now())
+}
+
+// model Profile {
+//   id       Int     @id @default(autoincrement())
+//   slug     String  @unique
+//   vorname  String
+//   nachname String
+//   avatar   String  @default("https://avataaars.io/?avatarStyle=Transparent")
+//   klasse   String
+//   hobbies  String?
+//   User     User[]
+// }

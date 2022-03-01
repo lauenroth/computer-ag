@@ -15,13 +15,13 @@ const breadcumbItems = [
   },
 ];
 
-const UPDATE_PROFILE = gql`
-  mutation CreateContactMutation($input: UpdateUserInput!) {
-    updateUser(input: $input) {
-      id
-    }
-  }
-`;
+// const UPDATE_PROFILE = gql`
+//   mutation CreateContactMutation($input: UpdateUserInput!) {
+//     updateUser(input: $input) {
+//       id
+//     }
+//   }
+// `;
 
 const ProfilPage = () => {
   const { currentUser } = useAuth();
@@ -35,7 +35,7 @@ const ProfilPage = () => {
       <MetaTags title="Dein Profil | Computer AG" />
       <Breadcrumb items={breadcumbItems} />
       <section>
-        <h1>Dein Profil</h1>
+        <h1>Profil</h1>
         <p>
           Hier kannst du dein Profil anpassen. Momentan kannst du nur dein
           Avatar (also dein Profilbild) ändern.

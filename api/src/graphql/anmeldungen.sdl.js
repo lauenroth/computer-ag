@@ -33,4 +33,4 @@ export const schema = gql`
       @requireAuth
     deleteAnmeldung(id: Int!): Anmeldung! @requireAuth
   }
-`
+`;

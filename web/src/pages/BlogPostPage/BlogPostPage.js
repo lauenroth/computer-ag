@@ -3,11 +3,9 @@ import MainLayout from 'src/layouts/MainLayout/MainLayout';
 
 const BlogPostPage = ({ slug }) => {
   return (
-    <>
-      <MainLayout isMaxWidth>
-        <PostCell slug={slug} />
-      </MainLayout>
-    </>
+    <MainLayout isMaxWidth>
+      <PostCell slug={slug} />
+    </MainLayout>
   );
 };
 
