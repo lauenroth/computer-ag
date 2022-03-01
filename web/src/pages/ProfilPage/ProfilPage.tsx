@@ -11,7 +11,7 @@ import Breadcrumb from 'src/components/Breadcrumb/Breadcrumb';
 
 const breadcumbItems = [
   {
-    name: 'Dein Profil',
+    name: 'Mein Profil',
   },
 ];
 
