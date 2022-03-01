@@ -24,7 +24,7 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
-              <h2>HTML - weiter geht&rsquo;s</h2>
+              <h2>#6 HTML - weiter geht&rsquo;s</h2>
               <p>1.3.2022</p>
             </header>
             <p>Heute arbeiten wir weiter an den persönlichen Webseiten.</p>
@@ -38,7 +38,7 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
-              <h2>HTML</h2>
+              <h2>#5 HTML</h2>
               <p>22.02.2022</p>
             </header>
             <p>
@@ -83,7 +83,7 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
-              <h2>Das Internet</h2>
+              <h2>#4 Das Internet</h2>
               <p>15.2.2022</p>
             </header>
             <p>
@@ -156,7 +156,7 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
-              <h2>Daten, Speicher</h2>
+              <h2>#3 Daten, Speicher</h2>
               <p>8.2.2022</p>
             </header>
             <p>
@@ -208,7 +208,7 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
-              <h2>EVA, Tastatur</h2>
+              <h2>#2 EVA, Tastatur</h2>
               <p>25.1.2022</p>
             </header>
             <p>
@@ -233,7 +233,7 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
-              <h2>Erste Stunde 🎉</h2>
+              <h2>#1 Erste Stunde 🎉</h2>
               <p>18.1.2022</p>
             </header>
             <p>
