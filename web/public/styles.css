@@ -148,6 +148,10 @@ nav ul a:focus,
   text-decoration: none;
 }
 
+.btn {
+  margin-bottom: 30px;
+}
+
 
 ul.hobbies {
   display: grid;
