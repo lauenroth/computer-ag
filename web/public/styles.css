@@ -43,7 +43,7 @@ a:hover {
 
 h1 {
 	font-family: 'Cabin Sketch', Helvetica, cursive;
-	font-size: 38px;
+	font-size: 32px;
 	font-weight: normal;
 }
 h2,
@@ -81,6 +81,7 @@ main {
 
 
 table {
+  margin: 0 0 30px;
   width: 100%;
 }
 
@@ -105,11 +106,15 @@ td {
 nav {
   align-items: center;
   background-color: var(--color-background-secondary);
+  border-radius: 4px;
   color: var(--color-background);
   display: flex;
   justify-content: space-between;
   height: 80px;
   padding: 0 30px;
+}
+nav h1 {
+  font-size: 28px;
 }
 nav h1 a {
   color: var(--color-background);
@@ -117,22 +122,29 @@ nav h1 a {
 }
 nav ul {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
 }
-nav ul a {
+nav ul a,
+.btn {
   background-color: var(--color-ternary);
+  border: 0;
   border-radius: 4px;
   color: var(--color-background-secondary);
+  cursor: pointer;
+  font-size: .9rem;
   font-weight: bold;
+  opacity: .85;
   padding: 10px 20px;
   text-decoration: none;
-  transition: .25s;
+  transition: opacity .25s;
 }
 
 nav ul a:hover,
-nav ul a:focus {
-  background-color: var(--color-background);
+nav ul a:focus,
+.btn:hover,
+.btn:focus {
+  opacity: 1;
   text-decoration: none;
 }
 
@@ -142,6 +154,7 @@ ul.hobbies {
   list-style: none;
   gap: 30px;
   grid-template-columns: 2fr 2fr 2fr;
+  padding: 0;
 }
 
 ul.hobbies li {

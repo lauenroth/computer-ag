@@ -1,3 +1,4 @@
+<title>Meine erste Webseite</title>
 <link rel="stylesheet" href="/styles.css" />
 
 <nav>
@@ -14,6 +15,8 @@
   <p>Mein Name ist Jörg. Dies ist meine allererste Webseite!</p>
 
   <p>Seit Januar 2022 nehme ich an der Computer AG an der Grundschule am Rüdesheimer Platz teil.</p>
+
+  <p>Hier kannst du mehr über mich erfahren:</p>
 
 
   <h2>Meine Hobbies</h2>
@@ -36,3 +39,62 @@
 
   <hr />
 </main>
+
+
+<button class="btn" id="copy">HTML kopieren</button>
+
+<textarea style="width: 100%; height: 45em; display: none;">
+&lt;link rel="stylesheet" href="/styles.css" /&gt;
+
+&lt;nav&gt;
+  &lt;h1&gt;&lt;a href="webseite.html"&gt;Meine erste Webseite&lt;/a&gt;&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="hobbies.html"&gt;Hobbies&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="stundenplan.html"&gt;Stundenplan&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;h1&gt;Herzlich Willkommen!&lt;/h1&gt;
+
+  &lt;p&gt;Mein Name ist Jörg. Dies ist meine allererste Webseite!&lt;/p&gt;
+
+  &lt;p&gt;Seit Januar 2022 nehme ich an der Computer AG an der Grundschule am Rüdesheimer Platz teil.&lt;/p&gt;
+
+  &lt;p&gt;Hier kannst du mehr über mich erfahren:&lt;/p&gt;
+
+
+  &lt;h2&gt;Meine Hobbies&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Gitarre spielen&lt;/li&gt;
+    &lt;li&gt;Radfahren&lt;/li&gt;
+    &lt;li&gt;Skifahren&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;hr /&gt;
+
+  &lt;h2&gt;Meine Lieblingsfächer&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Mathematik&lt;/li&gt;
+    &lt;li&gt;Englisch&lt;/li&gt;
+    &lt;li&gt;Sport&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;hr /&gt;
+&lt;/main&gt;
+</textarea>
+
+<script>
+  var copyButton = document.getElementById('copy');
+  copyButton.addEventListener('click', function() {
+    var text = document.querySelector('textarea');
+    text.select();
+    navigator.clipboard.writeText(text.value);
+    copyButton.innerHTML = 'HTML kopiert!';
+    setTimeout(function() {
+      copyButton.innerHTML = 'HTML kopieren';
+    }, 2000);
+  });
+</script>
