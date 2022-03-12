@@ -193,7 +193,7 @@ body.modal .modal {
 
 .info {
   background-color: var(--color-background-secondary);
-  background-image: url(/images/info.svg);
+  background-image: url(/public/images/info.svg);
   background-position: 20px center;
   background-repeat: no-repeat;
   border-radius: 10px;
@@ -208,12 +208,7 @@ label {
   gap: 10px;
   padding-bottom: 5px;
   padding-left: 10px;
-
-  span {
-    font-size: 10px;
-  }
 }
-
 label input:disabled {
   color: #ccc;
 }

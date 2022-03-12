@@ -17,10 +17,8 @@ const Routes = () => {
       <Route path="/webseite" page={WebseitePage} name="webseite" />
       <Route path="/quiz" page={QuizPage} name="quiz" />
       <Route path="/blog/{slug}" page={BlogPostPage} name="blogPost" />
-      <Route path="/blog" page={BlogPage} name="blog" />
       <Route path="/anmeldungen" page={AnmeldungenPage} name="anmeldungen" />
       <Route path="/feedback" page={FeedbackPage} name="feedback" />
-      <Route path="/was-ist-ein-computer" page={WasIstEinComputerPage} name="wasIstEinComputer" />
       <Route path="/uebersicht" page={UebersichtPage} name="uebersicht" />
       <Route path="/flyer" page={FlyerPage} name="flyer" />
       <Set private wrap={MainLayout} isMaxWidth unauthenticated="login">
@@ -35,7 +33,7 @@ const Routes = () => {
         {/* <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" /> */}
         {/* <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" /> */}
 
-        <Route path="/meine-ag" page={MeineAGPage} name="meineAg" />
+        <Route path="/meine-ag" page={MeineAgPage} name="meineAg" />
         <Route path="/datenschutz" page={DatenschutzPage} name="datenschutz" />
         <Route path="/impressum" page={ImpressumPage} name="impressum" />
       </Set>
