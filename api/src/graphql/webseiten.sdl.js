@@ -9,8 +9,8 @@ export const schema = gql`
   }
 
   type Query {
-    webseites: [Webseite!]! @requireAuth
-    webseite(id: Int!): Webseite @requireAuth
+    webseiten: [Webseite!]! @skipAuth
+    webseite(slug: String!): Webseite @skipAuth
   }
 
   input CreateWebseiteInput {
@@ -25,12 +25,5 @@ export const schema = gql`
     slug: String
     design: String
     html: String
-  }
-
-  type Mutation {
-    createWebseite(input: CreateWebseiteInput!): Webseite! @requireAuth
-    updateWebseite(id: Int!, input: UpdateWebseiteInput!): Webseite!
-      @requireAuth
-    deleteWebseite(id: Int!): Webseite! @requireAuth
   }
 `;
