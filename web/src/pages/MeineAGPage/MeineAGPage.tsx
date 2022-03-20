@@ -24,6 +24,22 @@ const MeineAgPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#7 Cascading Style Sheets (CSS)</h2>
+              <p>15.3.2022</p>
+            </header>
+            <p>
+              Letzte Woche war der international Frauentag, daher ist die
+              Computer AG ausgefallen. Daher blicken wir in den ersten Minuten
+              der heutigen Stunde auf Frauen in der IT-Welt: Frauenanteile in
+              der IT-Branche in verschiedenen Ländern und Unterschiede in der
+              Bezahlung. Außerdem reden wir über zwei Frauen, die großes für die
+              (IT) Welt geleistet haben.
+            </p>
+            <p>Danach geht es mit CSS und dem Stylen von HTML Elementen los.</p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#6 HTML - weiter geht&rsquo;s</h2>
               <p>1.3.2022</p>
             </header>

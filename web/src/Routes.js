@@ -8,20 +8,18 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Router, Route, Set } from '@redwoodjs/router';
-import WebseitesLayout from 'src/layouts/WebseitesLayout';
+import WebpagesLayout from 'src/layouts/WebpagesLayout';
 import MainLayout from './layouts/MainLayout/MainLayout';
 
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={WebseitesLayout}>
-        <Route path="/webseiten/new" page={WebseiteNewWebseitePage} name="newWebseite" />
-        <Route path="/webseiten/{id:Int}/edit" page={WebseiteEditWebseitePage} name="editWebseite" />
-        <Route path="/webseiten/{id:Int}" page={WebseiteWebseitePage} name="webseite" />
-        <Route path="/webseiten" page={WebseiteWebseitesPage} name="webseites" />
+      <Set wrap={WebpagesLayout}>
+        <Route path="/webpages/new" page={WebpageNewWebpagePage} name="newWebpage" />
+        <Route path="/webpages/{id:Int}/edit" page={WebpageEditWebpagePage} name="editWebpage" />
+        <Route path="/webpages/{id:Int}" page={WebpageWebpagePage} name="webpage" />
+        <Route path="/webpages" page={WebpageWebpagesPage} name="webpages" />
       </Set>
-      <Route path="/web/{slug}" page={WebsitePage} name="website" />
-      <Route path="/webseite" page={WebseitePage} name="webseite" />
       <Route path="/quiz" page={QuizPage} name="quiz" />
       <Route path="/blog/{slug}" page={BlogPostPage} name="blogPost" />
       <Route path="/anmeldungen" page={AnmeldungenPage} name="anmeldungen" />
