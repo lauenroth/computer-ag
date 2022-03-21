@@ -42,14 +42,14 @@ model User {
   // website             Website?  @relation(fields: [websiteId], references: [id])
 }
 
-model Webpage {
-  id        Int      @id @default(autoincrement())
-  name      String
-  slug      String   @unique
-  design    String   @default("default")
-  html      String
-  createdAt DateTime @default(now())
-}
+// model Webpage {
+//   id        Int      @id @default(autoincrement())
+//   name      String
+//   slug      String   @unique
+//   design    String   @default("default")
+//   html      String
+//   createdAt DateTime @default(now())
+// }
 
 // model Website {
 //   id        Int      @id @default(autoincrement())
