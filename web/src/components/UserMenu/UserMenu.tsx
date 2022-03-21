@@ -42,11 +42,10 @@ const UserMenu = () => {
         </ul>
       </MenuWrapper>
     </>
-  ) : (
-    <Link to={routes.login()} className="btn btn-primary login-button">
-      Anmelden
-    </Link>
-  );
+  ) : null;
+  // <Link to={routes.login()} className="btn btn-primary login-button">
+  //   Anmelden
+  // </Link>
 };
 
 const AvatarButton = styled.button`

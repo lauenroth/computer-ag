@@ -51,7 +51,7 @@ const ResetPasswordPage = ({ resetToken }) => {
     } else {
       toast.success('Password changed!');
       await reauthenticate();
-      navigate(routes.login());
+      // navigate(routes.login());
     }
   };
 
