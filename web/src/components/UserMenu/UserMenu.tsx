@@ -20,7 +20,7 @@ const UserMenu = () => {
             <button
               onClick={() => {
                 setShowMenu(false);
-                navigate(routes.meineAg());
+                // navigate(routes.meineAg());
               }}
             >
               Meine AG
