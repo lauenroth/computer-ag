@@ -1,5 +1,5 @@
 import { Form, TextAreaField } from '@redwoodjs/forms';
-import { routes } from '@redwoodjs/router';
+// import { routes } from '@redwoodjs/router';
 import { MetaTags } from '@redwoodjs/web';
 import Breadcrumb from 'src/components/Breadcrumb/Breadcrumb';
 
@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const breadcumbItems = [
   {
     name: 'Meine AG',
-    url: routes.meineAg(),
+    // url: routes.meineAg(),
   },
   {
     name: 'Schreibtest',

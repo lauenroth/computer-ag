@@ -21,10 +21,9 @@ const HomePage = () => {
           </p>
 
           <p>
-            <Link to={routes.meineAg()} className="btn btn-primary">
+            {/* <Link to={routes.meineAg()} className="btn btn-primary">
               Zur Kursübersicht
-            </Link>
-            
+            </Link> */}
           </p>
 
           <h2>
