@@ -26,12 +26,12 @@ const Routes = () => {
       <Route path="/feedback" page={FeedbackPage} name="feedback" />
       <Route path="/uebersicht" page={UebersichtPage} name="uebersicht" />
       <Route path="/flyer" page={FlyerPage} name="flyer" />
-      <Set private wrap={MainLayout} isMaxWidth unauthenticated="login">
+      {/* <Set private wrap={MainLayout} isMaxWidth unauthenticated="login">
         <Route path="/schreiben" page={SchreibenPage} name="schreiben" />
       </Set>
       <Set private wrap={MainLayout} isMaxWidth unauthenticated="login" maxWidth="default">
         <Route path="/profil" page={ProfilPage} name="profil" />
-      </Set>
+      </Set> */}
       <Set wrap={MainLayout} isMaxWidth>
         <Route path="/anmelden" page={LoginPage} name="login" />
         <Route path="/signup" page={SignupPage} name="signup" />
