@@ -39,6 +39,7 @@ const Routes = () => {
         {/* <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" /> */}
 
         {/* <Route path="/meine-ag" page={MeineAgPage} name="meineAg" /> */}
+        <Route path="/kurs-archiv" page={KursArchivPage} name="kursArchiv" />
         <Route path="/datenschutz" page={DatenschutzPage} name="datenschutz" />
         <Route path="/impressum" page={ImpressumPage} name="impressum" />
       </Set>

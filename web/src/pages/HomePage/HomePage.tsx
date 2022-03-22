@@ -20,13 +20,39 @@ const HomePage = () => {
             Erlernte praktisch anzuwenden.
           </p>
 
+          <section className="stunde">
+            <header>
+              <h2>#8 Programmierung</h2>
+              <p>22.3.2022</p>
+            </header>
+            <p>
+              Heute geht es mit der Einführung in die Programmierung los. Was
+              bedeutet &quot;Programmieren&quot; überhaupt?
+            </p>
+            <p>
+              <a
+                href="https://app.code-it-studio.de/course/step/4/44"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Programmieren bei Code-It
+              </a>
+            </p>
+          </section>
+
           <p>
-            {/* <Link to={routes.meineAg()} className="btn btn-primary">
-              Zur Kursübersicht
-            </Link> */}
+            <Link to={routes.kursArchiv()} className="btn btn-primary">
+              Ältere Stunden
+            </Link>
           </p>
 
-          <h2>
+          {/* <p>
+            <Link to={routes.meineAg()} className="btn btn-primary">
+              Zur Kursübersicht
+            </Link>
+          </p> */}
+
+          {/* <h2>
             Themen (<abbr title="unter anderem">u.a.</abbr>)
           </h2>
           <ul>
@@ -55,7 +81,7 @@ const HomePage = () => {
             <li>Netzwerke</li>
             <li>Bluetooth / NFC</li>
             <li>QR-Code / RFID</li>
-          </ul>
+          </ul> */}
 
           <h2>Wann, wo, wie?!?</h2>
           <p>Die Computer AG findet wie folgt statt:</p>
@@ -235,6 +261,23 @@ const MainWrapper = styled.main`
 
   .info {
     max-width: 540px;
+  }
+
+  .stunde {
+    background-color: var(--color-background-secondary);
+    border-radius: 10px;
+    color: var(--color-background);
+    margin: 30px 0 30px;
+    padding: 20px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: 1260px) {
