@@ -29,13 +29,23 @@ const HomePage = () => {
               Heute geht es mit der Einführung in die Programmierung los. Was
               bedeutet &quot;Programmieren&quot; überhaupt?
             </p>
-            <p>
+            <p className="buttons">
+              <a
+                href="https://slides.com/d/L2n4SQo/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Präsentation
+              </a>
+
               <a
                 href="https://app.code-it-studio.de/course/step/4/44"
                 target="_blank"
                 rel="noreferrer"
+                className="btn btn-primary"
               >
-                Programmieren bei Code-It
+                Programmieren: Code It
               </a>
             </p>
           </section>
@@ -261,6 +271,11 @@ const MainWrapper = styled.main`
 
   .info {
     max-width: 540px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
   }
 
   .stunde {
