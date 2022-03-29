@@ -20,7 +20,6 @@ const MeineAgPage = () => {
       <Wrapper>
         <div>
           <h1>Meine AG</h1>
-          {/* <p>Hallo {currentUser?.name} 👋</p> */}
 
           <section className="stunde">
             <header>

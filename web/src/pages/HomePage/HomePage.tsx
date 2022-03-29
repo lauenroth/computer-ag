@@ -22,15 +22,13 @@ const HomePage = () => {
 
           <section className="stunde">
             <header>
-              <h2>#8 Programmierung</h2>
+              <h2>#9 Programmierung - Teil 2</h2>
               <p>22.3.2022</p>
             </header>
+            <p>Wir arbeiten weiter an unserem Spiel 🙂</p>
             <p>
-              Heute geht es mit der Einführung in die Programmierung los! 🎉
-            </p>
-            <p>
-              Was bedeutet &quot;Programmieren&quot; überhaupt? Was sind
-              Anweisungen, Bedingungen und Schleifen?
+              Vorher gibt es noch eine kurze Wiederholung: Was sind Schleifen
+              und Bedingungen? Was sind Variablen?
             </p>
             <p>
               <a
@@ -42,10 +40,7 @@ const HomePage = () => {
                 Präsentation
               </a>
             </p>
-            <p>
-              Nach der kurzen Präsentation geht es direkt los: wir programmieren
-              unser erstes Spiel!
-            </p>
+            <p>Hier geht es zu Code It:</p>
             <p className="buttons">
               <a
                 href="https://app.code-it-studio.de/course/step/4/44"
@@ -53,16 +48,25 @@ const HomePage = () => {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Code it (Kücken Toni)
+                Kückenrennen - Kurs 1
               </a>
 
               <a
-                href="https://studio.code.org/courses"
+                href="https://app.code-it-studio.de/course/step/10/71"
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Code.org (Minecraft, Anna & Elsa,...)
+                Kückenrennen - Kurs 2
+              </a>
+
+              <a
+                href="https://app.code-it-studio.de/course/step/11/101"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Kückenrennen - Kurs 3
               </a>
             </p>
           </section>

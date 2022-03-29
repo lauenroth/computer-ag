@@ -19,6 +19,53 @@ const KursArchivPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#8 Programmierung</h2>
+              <p>22.3.2022</p>
+            </header>
+            <p>
+              Heute geht es mit der Einführung in die Programmierung los! 🎉
+            </p>
+            <p>
+              Was bedeutet &quot;Programmieren&quot; überhaupt? Was sind
+              Anweisungen, Bedingungen und Schleifen?
+            </p>
+            <p>
+              <a
+                href="https://slides.com/d/L2n4SQo/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Präsentation
+              </a>
+            </p>
+            <p>
+              Nach der kurzen Präsentation geht es direkt los: wir programmieren
+              unser erstes Spiel!
+            </p>
+            <p className="buttons">
+              <a
+                href="https://app.code-it-studio.de/course/step/4/44"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Code it (Kücken Toni)
+              </a>
+
+              <a
+                href="https://studio.code.org/courses"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Code.org (Minecraft, Anna & Elsa,...)
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#7 Cascading Style Sheets (CSS)</h2>
               <p>15.3.2022</p>
             </header>
