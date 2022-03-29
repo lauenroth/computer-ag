@@ -23,7 +23,7 @@ const HomePage = () => {
           <section className="stunde">
             <header>
               <h2>#9 Programmierung - Teil 2</h2>
-              <p>22.3.2022</p>
+              <p>29.3.2022</p>
             </header>
             <p>Wir arbeiten weiter an unserem Spiel 🙂</p>
             <p>
