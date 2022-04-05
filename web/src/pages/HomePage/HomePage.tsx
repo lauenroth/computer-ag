@@ -55,6 +55,15 @@ const HomePage = () => {
               >
                 Kurs 3
               </a>
+
+              <a
+                href="https://app.code-it-studio.de/makerspace/68"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Eigenes Spiel
+              </a>
             </p>
 
             <h3>Weitere Kurse</h3>
