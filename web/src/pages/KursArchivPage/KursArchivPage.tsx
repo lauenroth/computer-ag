@@ -19,6 +19,57 @@ const KursArchivPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#9 Programmierung - Teil 2</h2>
+              <p>29.3.2022</p>
+            </header>
+            <p>Wir arbeiten weiter an unserem Spiel 🙂</p>
+            <p>
+              Vorher gibt es noch eine kurze Wiederholung: Was sind Schleifen
+              und Bedingungen? Was sind Variablen?
+            </p>
+            <p>
+              <a
+                href="https://slides.com/d/L2n4SQo/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Präsentation
+              </a>
+            </p>
+            <p>Hier geht es zu Code It:</p>
+            <p className="buttons">
+              <a
+                href="https://app.code-it-studio.de/course/step/4/44"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Kückenrennen - Kurs 1
+              </a>
+
+              <a
+                href="https://app.code-it-studio.de/course/step/10/71"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Kückenrennen - Kurs 2
+              </a>
+
+              <a
+                href="https://app.code-it-studio.de/course/step/11/101"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Kückenrennen - Kurs 3
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#8 Programmierung</h2>
               <p>22.3.2022</p>
             </header>

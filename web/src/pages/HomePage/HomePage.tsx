@@ -22,25 +22,12 @@ const HomePage = () => {
 
           <section className="stunde">
             <header>
-              <h2>#9 Programmierung - Teil 2</h2>
-              <p>29.3.2022</p>
+              <h2>#10 Programmierung - Teil 3</h2>
+              <p>5.4.2022</p>
             </header>
-            <p>Wir arbeiten weiter an unserem Spiel 🙂</p>
-            <p>
-              Vorher gibt es noch eine kurze Wiederholung: Was sind Schleifen
-              und Bedingungen? Was sind Variablen?
-            </p>
-            <p>
-              <a
-                href="https://slides.com/d/L2n4SQo/live"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-primary"
-              >
-                Präsentation
-              </a>
-            </p>
             <p>Hier geht es zu Code It:</p>
+
+            <h3>Kückenrennen</h3>
             <p className="buttons">
               <a
                 href="https://app.code-it-studio.de/course/step/4/44"
@@ -48,7 +35,7 @@ const HomePage = () => {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Kückenrennen - Kurs 1
+                Kurs 1
               </a>
 
               <a
@@ -57,7 +44,7 @@ const HomePage = () => {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Kückenrennen - Kurs 2
+                Kurs 2
               </a>
 
               <a
@@ -66,7 +53,35 @@ const HomePage = () => {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Kückenrennen - Kurs 3
+                Kurs 3
+              </a>
+            </p>
+
+            <h3>Weitere Kurse</h3>
+            <p className="buttons">
+              <a
+                href="https://studio.code.org/s/starwarsblocks/lessons/1/levels/1"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Star Wars
+              </a>
+              <a
+                href="https://studio.code.org/s/dance-2019/lessons/1/levels/1"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Tanzparty
+              </a>
+              <a
+                href="https://studio.code.org/s/frozen/lessons/1/levels/1"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Eiskönigin
               </a>
             </p>
           </section>
