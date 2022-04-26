@@ -19,6 +19,81 @@ const KursArchivPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#10 Programmierung - Teil 3</h2>
+              <p>5.4.2022</p>
+            </header>
+            <p>Hier geht es zu Code It:</p>
+
+            <h3>Kückenrennen</h3>
+            <p className="buttons">
+              <a
+                href="https://app.code-it-studio.de/course/step/4/44"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Kurs 1
+              </a>
+
+              <a
+                href="https://app.code-it-studio.de/course/step/10/71"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Kurs 2
+              </a>
+
+              <a
+                href="https://app.code-it-studio.de/course/step/11/101"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Kurs 3
+              </a>
+
+              <a
+                href="https://app.code-it-studio.de/makerspace/68"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Eigenes Spiel
+              </a>
+            </p>
+
+            <h3>Weitere Kurse</h3>
+            <p className="buttons">
+              <a
+                href="https://studio.code.org/s/starwarsblocks/lessons/1/levels/1"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Star Wars
+              </a>
+              <a
+                href="https://studio.code.org/s/dance-2019/lessons/1/levels/1"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Tanzparty
+              </a>
+              <a
+                href="https://studio.code.org/s/frozen/lessons/1/levels/1"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Eiskönigin
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#9 Programmierung - Teil 2</h2>
               <p>29.3.2022</p>
             </header>
