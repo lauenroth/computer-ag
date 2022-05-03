@@ -19,6 +19,39 @@ const KursArchivPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#11 Datenbanken</h2>
+              <p>26.4.2022</p>
+            </header>
+
+            <p>
+              Heute lernen wir die Grundlagen zum Thema Datenbanken. Was ist
+              einen Datenbank? Wofür braucht man sie? Welche Daten können
+              gespeichert werden?
+            </p>
+
+            <p className="buttons">
+              <a
+                href="https://slides.com/d/s2b9fNo/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Präsentation
+              </a>
+
+              <a
+                href="http://datenbank.computer-ag.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Zur Datenbank
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#10 Programmierung - Teil 3</h2>
               <p>5.4.2022</p>
             </header>

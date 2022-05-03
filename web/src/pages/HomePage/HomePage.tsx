@@ -4,6 +4,19 @@ import Anmeldung from 'src/components/Anmeldung/Anmeldung';
 import styled from 'styled-components';
 
 const HomePage = () => {
+  const teilnehmer = [
+    'Bruno',
+    'Emilia',
+    'Gesine',
+    'Juli',
+    'Musa',
+    'Mustafa',
+    'Nahla',
+    'Rowan',
+    'William',
+    'Yinoll',
+  ];
+
   return (
     <>
       <MetaTags
@@ -22,33 +35,47 @@ const HomePage = () => {
 
           <section className="stunde">
             <header>
-              <h2>#11 Datenbanken</h2>
-              <p>26.4.2022</p>
+              <h2>#12 Benutzerkonten / Eigene Website</h2>
+              <p>3.5.2022</p>
             </header>
 
             <p>
-              Heute lernen wir die Grundlagen zum Thema Datenbanken. Was ist
-              einen Datenbank? Wofür braucht man sie? Welche Daten können
-              gespeichert werden?
+              <a
+                href="https://slides.com/d/bosc9Ws/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Benutzerkonten / Passwörter
+              </a>
             </p>
 
-            <p className="buttons">
-              <a
-                href="https://slides.com/d/s2b9fNo/live"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-primary"
-              >
-                Präsentation
-              </a>
+            <h2>Eigene Website</h2>
 
+            <p>Jede(r) Teilnehmer(in) hat jetzt eine eigene Website!</p>
+
+            <ul>
+              {teilnehmer.map((teilnehmer) => (
+                <li key={`teilnehmer=${teilnehmer}`}>
+                  <a
+                    href={`https://${teilnehmer.toLocaleLowerCase()}.computer-ag.com/`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {teilnehmer}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <p>
               <a
-                href="http://datenbank.computer-ag.com/"
+                href="https://codesandbox.io/"
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Zur Datenbank
+                Codesandbox
               </a>
             </p>
           </section>

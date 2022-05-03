@@ -36,7 +36,12 @@ const MainLayout: FC<Props> = ({
             <span>Grundschule</span> am Rüdesheimer Platz
           </div>
         </h1>
-        <img src="/images/vr.png" alt="VR Brille" className="vr" />
+        <button
+          onClick={() => navigator.clipboard.writeText('pjd.MEN@gkq@kng8rqv')}
+          className="vr"
+        >
+          <img src="/images/vr.png" alt="VR Brille" />
+        </button>
       </MainHeader>
       {isMaxWidth ? (
         <CenteredWrapper maxWidth={maxWidth}>{content}</CenteredWrapper>
@@ -95,12 +100,18 @@ const MainHeader = styled.header`
   }
 
   .vr {
+    background: none;
+    border: 0;
     height: 90px;
     position: absolute;
     left: 30px;
     top: 25px;
     transform: scaleX(-1);
     transition: top 0.25s;
+
+    img {
+      height: 90px;
+    }
   }
 
   .vr:hover {
