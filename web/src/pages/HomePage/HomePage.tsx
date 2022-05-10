@@ -4,19 +4,6 @@ import Anmeldung from 'src/components/Anmeldung/Anmeldung';
 import styled from 'styled-components';
 
 const HomePage = () => {
-  const teilnehmer = [
-    'Bruno',
-    'Emilia',
-    'Gesine',
-    'Juli',
-    'Musa',
-    'Mustafa',
-    'Nahla',
-    'Rowan',
-    'William',
-    'Yinoll',
-  ];
-
   return (
     <>
       <MetaTags
@@ -35,47 +22,24 @@ const HomePage = () => {
 
           <section className="stunde">
             <header>
-              <h2>#12 Benutzerkonten / Eigene Website</h2>
-              <p>3.5.2022</p>
+              <h2>#13 Programmieren mit Scratch</h2>
+              <p>10.5.2022</p>
             </header>
 
             <p>
-              <a
-                href="https://slides.com/d/bosc9Ws/live"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-primary"
-              >
-                Benutzerkonten / Passwörter
-              </a>
+              Heute sehen wir uns Scratch an. Scratch ist eine visuelle
+              Programmiersprache mit der man beispielsweise Spiele programmieren
+              kann. Und genau das wollen wir heute machen 🙂
             </p>
-
-            <h2>Eigene Website</h2>
-
-            <p>Jede(r) Teilnehmer(in) hat jetzt eine eigene Website!</p>
-
-            <ul>
-              {teilnehmer.map((teilnehmer) => (
-                <li key={`teilnehmer=${teilnehmer}`}>
-                  <a
-                    href={`https://${teilnehmer.toLocaleLowerCase()}.computer-ag.com/`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {teilnehmer}
-                  </a>
-                </li>
-              ))}
-            </ul>
 
             <p>
               <a
-                href="https://codesandbox.io/"
+                href="https://scratch.mit.edu/projects/editor/"
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Codesandbox
+                Scratch
               </a>
             </p>
           </section>

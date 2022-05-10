@@ -8,6 +8,19 @@ const breadcumbItems = [
   },
 ];
 
+const teilnehmer = [
+  'Bruno',
+  'Emilia',
+  'Gesine',
+  'Juli',
+  'Musa',
+  'Mustafa',
+  'Nahla',
+  'Rowan',
+  'William',
+  'Yinoll',
+];
+
 const KursArchivPage = () => {
   return (
     <>
@@ -16,6 +29,53 @@ const KursArchivPage = () => {
       <Wrapper>
         <div>
           <h1>Kursarchiv</h1>
+
+          <section className="stunde">
+            <header>
+              <h2>#12 Benutzerkonten / Eigene Website</h2>
+              <p>3.5.2022</p>
+            </header>
+
+            <p>
+              <a
+                href="https://slides.com/d/bosc9Ws/live"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Benutzerkonten / Passwörter
+              </a>
+            </p>
+
+            <h2>Eigene Website</h2>
+
+            <p>Jede(r) Teilnehmer(in) hat jetzt eine eigene Website!</p>
+
+            <ul>
+              {teilnehmer.map((teilnehmer) => (
+                <li key={`teilnehmer=${teilnehmer}`}>
+                  <a
+                    href={`https://${teilnehmer.toLocaleLowerCase()}.computer-ag.com/`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {teilnehmer}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <p>
+              <a
+                href="https://codesandbox.io/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Codesandbox
+              </a>
+            </p>
+          </section>
 
           <section className="stunde">
             <header>
@@ -585,6 +645,29 @@ const Wrapper = styled.main`
     h2 {
       margin-top: 0;
     }
+
+    ul {
+      display: flex;
+      flex-flow: wrap;
+      gap: 20px;
+      list-style: none;
+      margin: 30px 0px;
+      max-width: var(--max-width);
+      padding: 0px;
+    }
+
+    ul li {
+      background-color: var(--color-secondary);
+      border-radius: 10px;
+      color: var(--color-background);
+      font-size: 0.8rem;
+      padding: 5px 10px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
   }
 
   aside {
