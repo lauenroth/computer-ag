@@ -30,7 +30,8 @@ const HomePage = () => {
               Heute sehen wir uns Scratch an. Scratch ist eine visuelle
               Programmiersprache mit der man beispielsweise Spiele programmieren
               kann. Und genau das wollen wir heute machen 🙂{' '}
-              <a href="/scratch/Jump.sb3">🐥</a>
+              <a href="/scratch/Jump.sb3">🐥</a>{' '}
+              <a href="/scratch/KatzMaus.sb3">🐱</a>
             </p>
 
             <p>
