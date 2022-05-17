@@ -22,15 +22,13 @@ const HomePage = () => {
 
           <section className="stunde">
             <header>
-              <h2>#13 Programmieren mit Scratch</h2>
-              <p>10.5.2022</p>
+              <h2>#14 Programmieren mit Scratch - Teil 2</h2>
+              <p>17.5.2022</p>
             </header>
 
             <p>
-              Heute sehen wir uns Scratch an. Scratch ist eine visuelle
-              Programmiersprache mit der man beispielsweise Spiele programmieren
-              kann. Und genau das wollen wir heute machen 🙂{' '}
-              <a href="/scratch/Jump.sb3">🐥</a>{' '}
+              Letzte Woche haben wir uns Scratch angesehen und ein erstes Spiel
+              entwickelt! Heute geht es weiter mit der Spieleentwicklung!{' '}
               <a href="/scratch/KatzMaus.sb3">🐱</a>
             </p>
 

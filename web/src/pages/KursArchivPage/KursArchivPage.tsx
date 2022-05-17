@@ -32,6 +32,35 @@ const KursArchivPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#13 Programmieren mit Scratch</h2>
+              <p>10.5.2022</p>
+            </header>
+
+            <p>
+              Heute sehen wir uns Scratch an. Scratch ist eine visuelle
+              Programmiersprache mit der man beispielsweise Spiele programmieren
+              kann. Und genau das wollen wir heute machen 🙂{' '}
+              <a href="/scratch/KatzMaus.sb3">🐱</a>
+            </p>
+
+            <p className="buttons">
+              <a
+                href="https://scratch.mit.edu/projects/editor/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Scratch
+              </a>
+
+              <a href="/scratch/Jump.sb3" className="btn btn-primary" download>
+                Download: Jump Game
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#12 Benutzerkonten / Eigene Website</h2>
               <p>3.5.2022</p>
             </header>
