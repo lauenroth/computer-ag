@@ -32,6 +32,30 @@ const KursArchivPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#14 Programmieren mit Scratch - Teil 2</h2>
+              <p>17.5.2022</p>
+            </header>
+
+            <p>
+              Letzte Woche haben wir uns Scratch angesehen und ein erstes Spiel
+              entwickelt! Heute geht es weiter mit der Spieleentwicklung!{' '}
+              <a href="/scratch/KatzMaus.sb3">🐱</a>
+            </p>
+
+            <p>
+              <a
+                href="https://scratch.mit.edu/projects/editor/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Scratch
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#13 Programmieren mit Scratch</h2>
               <p>10.5.2022</p>
             </header>

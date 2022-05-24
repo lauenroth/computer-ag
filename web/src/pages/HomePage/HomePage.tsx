@@ -22,14 +22,15 @@ const HomePage = () => {
 
           <section className="stunde">
             <header>
-              <h2>#14 Programmieren mit Scratch - Teil 2</h2>
-              <p>17.5.2022</p>
+              <h2>#15 Programmieren mit Scratch - Teil 3</h2>
+              <p>24.5.2022</p>
             </header>
 
             <p>
-              Letzte Woche haben wir uns Scratch angesehen und ein erstes Spiel
-              entwickelt! Heute geht es weiter mit der Spieleentwicklung!{' '}
-              <a href="/scratch/KatzMaus.sb3">🐱</a>
+              Da alle mit viel Spaß dabei waren, geht es heute mit der
+              Spieleentwicklung in Scratch weiter. Du kannst dich mit dem
+              Benutzernamen <em>garp-ag</em> anmelden, damit du deine Spiele
+              auch speichern kannst.
             </p>
 
             <p>
@@ -40,6 +41,54 @@ const HomePage = () => {
                 className="btn btn-primary"
               >
                 Scratch
+              </a>
+            </p>
+
+            <h4>Tutorials</h4>
+            <p className="buttons">
+              <a
+                href="https://www.youtube.com/watch?v=vK6MK15QPFo"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Autorennen
+              </a>
+
+              <a
+                href="https://www.youtube.com/watch?v=4voC7HEHbeo"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Pac-Man
+              </a>
+
+              <a
+                href="https://www.youtube.com/watch?v=trFGDj1O-xY"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Doodle Jump
+              </a>
+
+              <a
+                href="https://www.youtube.com/watch?v=Aav18WsuXNs"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Weltraum
+              </a>
+
+              <a
+                href="https://www.youtube.com/watch?v=emaXCb2pXWY"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Towser Defense
               </a>
             </p>
           </section>
