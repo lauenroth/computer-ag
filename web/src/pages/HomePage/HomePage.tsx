@@ -88,7 +88,7 @@ const HomePage = () => {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Towser Defense
+                Tower Defense
               </a>
             </p>
           </section>
