@@ -32,6 +32,31 @@ const KursArchivPage = () => {
 
           <section className="stunde">
             <header>
+              <h2>#15 Programmieren mit Scratch - Teil 3</h2>
+              <p>24.5.2022</p>
+            </header>
+
+            <p>
+              Da alle mit viel Spaß dabei waren, geht es heute mit der
+              Spieleentwicklung in Scratch weiter. Du kannst dich mit dem
+              Benutzernamen <em>garp-ag</em> anmelden, damit du deine Spiele
+              auch speichern kannst.
+            </p>
+
+            <p>
+              <a
+                href="https://scratch.mit.edu/projects/editor/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-primary"
+              >
+                Scratch
+              </a>
+            </p>
+          </section>
+
+          <section className="stunde">
+            <header>
               <h2>#14 Programmieren mit Scratch - Teil 2</h2>
               <p>17.5.2022</p>
             </header>

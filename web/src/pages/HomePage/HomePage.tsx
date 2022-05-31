@@ -22,15 +22,15 @@ const HomePage = () => {
 
           <section className="stunde">
             <header>
-              <h2>#15 Programmieren mit Scratch - Teil 3</h2>
-              <p>24.5.2022</p>
+              <h2>#16 Programmieren mit Scratch - Teil 4</h2>
+              <p>31.5.2022</p>
             </header>
 
+            <p>Und weiter geht es mit der Spieleentwicklung in Scratch 🙂</p>
+
             <p>
-              Da alle mit viel Spaß dabei waren, geht es heute mit der
-              Spieleentwicklung in Scratch weiter. Du kannst dich mit dem
-              Benutzernamen <em>garp-ag</em> anmelden, damit du deine Spiele
-              auch speichern kannst.
+              Benutzername <strong>garp-ag</strong>. Passwort wird hier nicht
+              verraten 😉
             </p>
 
             <p>
