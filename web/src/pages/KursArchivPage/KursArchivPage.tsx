@@ -745,6 +745,7 @@ const Wrapper = styled.main`
 
   .buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
